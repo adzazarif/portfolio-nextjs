@@ -1,0 +1,138 @@
+{
+  "achievements": [
+    {
+      "id": 1,
+      "rank": "Juara 1",
+      "title": "UM SDGs Hackathon National Competition 2024",
+      "description": "Saya berhasil meraih Juara 1 dalam kompetisi pengembangan software selama 24 jam yang berfokus pada solusi untuk mendukung SDGs. Proyek mencakup pembuatan SPK, sistem donasi dengan Midtrans, serta pengembangan website menggunakan Laravel, Tailwind CSS, dan jQuery.",
+      "institution": "Universita Negeri Malang",
+      "location": "Malang, Jawa Timur, Indonesia",
+      "date": "Juni 2024",
+      "color": "bg-yellow-400/20 border-yellow-400/40 text-yellow-300",
+      "emoji": "🏆",
+      "images": [
+        "/images/image/lomba/um.png",
+        "/images/image/lomba/um2.png",
+        "/images/image/lomba/um3.png",
+        "/images/image/lomba/um3.png",
+        "/images/image/lomba/um5.png",
+        "/images/image/sertifikat/um.png"
+      ]
+    },
+    {
+      "id": 2,
+      "rank": "Juara 3",
+      "title": "National Competition Play IT 2024",
+      "description": "Saya berhasil meraih Juara 1 dalam kompetisi pengembangan teknologi selama 24 jam yang mencakup pembuatan Generative AI dan software untuk mendukung SDGs. Dalam proyek ini, saya mengembangkan model AI menggunakan Python, backend dengan Flask dan Laravel, serta frontend menggunakan Tailwind CSS, jQuery, dan Leaflet.",
+      "institution": "Politeknik Negeri Malang",
+      "location": "Malang, Jawa Timur, Indonesia",
+      "date": "November 2024",
+      "color": "bg-orange-400/20 border-orange-400/40 text-orange-300",
+      "emoji": "🥉",
+      "images": [
+           "/images/image/lomba/polinema.png",
+           "/images/image/lomba/polinema2.png",
+           "/images/image/lomba/polinema3.png",
+           "/images/image/lomba/polinema4.png",
+        "/images/image/sertifikat/polinema.png"
+      ]
+    },
+    {
+      "id": 3,
+      "rank": "Finalis",
+      "title": "Hackfest UC 2025",
+      "description": "Saya menjadi finalis dalam Hackfest Universitas Ciputra 2025. Proyek saya mencakup pembuatan website menggunakan React, Tailwind CSS, dan jQuery, serta integrasi dengan Midtrans dan Laravel.",
+      "institution": "Universitas Ciputra",
+      "location": "Surabaya, Jawa Timur, Indonesia",
+      "date": "Mei 2025",
+      "color": "bg-purple-400/20 border-purple-400/40 text-purple-300",
+      "emoji": "🎖️",
+      "images": [
+        "/images/image/lomba/uc.png",
+        "/images/image/lomba/uc2.png",
+        "/images/image/sertifikat/uc.png"
+      ]
+    },
+    {
+      "id": 4,
+      "rank": "Harapan 1",
+      "title": "TIF Exibition 2024",
+      "description": "Saya berhasil meraih harapan 1 dalam kompetisi TIF Exibition 2024 yang di adakan oleh Jurusan Teknologi Informasi Politeknik Negeri Jember. Proyek ini saya buat untuk project semester akhir, yang mencakup pembuatan website menggunakan Laravel, Tailwind CSS, dan jQuery.",
+      "institution": "Politeknik Negeri Jember",
+      "location": "Surabaya, Jawa Timur, Indonesia",
+      "date": "Mei 2024",
+      "color": "bg-purple-400/20 border-purple-400/40 text-purple-300",
+      "emoji": "🎖️",
+      "images": [
+        "/images/image/sertifikat/tif.png",
+        "/images/image/sertifikat/tif2.png",
+        "/images/image/sertifikat/tif3.png"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "title": "Junior Web Developer",
+      "issuer": "Badan Nasional Sertifikasi Profesi (BNSP)",
+      "date": "September 2023",
+      "image": "/images/image/sertifikat/junior-web.png"
+    },
+    {
+      "id": 2,
+      "title": "Junior Cyber Security",
+      "issuer": "Badan Nasional Sertifikasi Profesi (BNSP)",
+      "date": "Agustus 2023",
+      "image": "/images/image/sertifikat/junior-cyber.png"
+    },
+    {
+      "id": 3,
+      "title": "3rd Place - National Competition Play IT 2024",
+      "issuer": "Politeknik Negeri Malang",
+      "date": "November 2024",
+      "image": "/images/image/sertifikat/polinema.png"
+    },
+    {
+      "id": 4,
+      "title": "1st Place - UM SDGs Hackathon National Competition 2024",
+      "issuer": "Universitas Negeri Malang",
+      "date": "Juli 2024",
+      "image": "/images/image/sertifikat/um.png"
+    },
+    {
+      "id": 5,
+      "title": "Belajar Pengembangan Web Intermediate",
+      "issuer": "Dicoding",
+      "date": "Mei 2025",
+      "image": "/images/image/sertifikat/dicoding4.png"
+    },
+    {
+      "id": 6,
+      "title": "Belajar Back-end dengan Javascript",
+      "issuer": "Dicoding",
+      "date": "Juli 2025",
+      "image": "/images/image/sertifikat/dicoding.png"
+    },
+    {
+      "id": 7,
+      "title": "Belajar Fundamental Front-end Web Development",
+      "issuer": "Dicoding",
+      "date": "April 2025",
+      "image": "/images/image/sertifikat/dicoding5.png"
+    },
+    {
+      "id": 8,
+      "title": "Belajar Dasar Pemograman Web",
+      "issuer": "Dicoding",
+      "date": "Juli 2025",
+      "image": "/images/image/sertifikat/dicoding2.png"
+    },
+    {
+      "id": 9,
+      "title": "Harapan 1 Aplikasi",
+      "issuer": "Politeknik Negeri Jember",
+      "date": "Desember 2023",
+      "image": "/images/image/sertifikat/tif.png"
+    }
+  ]
+}
