@@ -233,7 +233,7 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-screen max-w-screen-2xl m-auto px-5 md:px-24 bg-[#0B0D14] text-white font-mono flex flex-col justify-center"
+      className="relative h-screen max-w-screen-2xl m-auto px-0 md:px-24 bg-[#0B0D14] text-white font-mono flex flex-col justify-center"
       id="home"
     >
 <header className="relative flex items-center justify-center pt-0 pb-8 px-4 sm:px-0 max-w-screen-lg mx-auto">

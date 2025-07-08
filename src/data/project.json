@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "title": "Smart Workshop Finder",
+      "type": "fullstack",
+      "description": "Platform untuk menemukan bengkel terdekat dengan fitur pencarian berbasis lokasi dan filter layanan.",
+      "image": "/images/images-project/26271740509248.png",
+      "github": "https://github.com/username/smart-workshop-finder",
+      "website": "https://smartworkshopfinder.vercel.app",
+      "date": "Juni 2023",
+      "tech": ["Next.js", "Tailwind CSS", "Express.js", "MySQL", "Leaflet"]
+    },
+    {
+      "id": 2,
+      "title": "EduChart Dashboard",
+      "type": "frontend",
+      "description": "Dashboard visualisasi data untuk pelajar dengan grafik interaktif dan fitur autentikasi.",
+      "image": "/images/images-project/26271740509248.png",
+      "github": "https://github.com/username/educhart-dashboard",
+      "website": "https://educhart.vercel.app",
+      "date": "Agustus 2023",
+      "tech": ["React", "Tailwind CSS", "Firebase", "Chart.js"]
+    },
+    {
+      "id": 3,
+      "title": "IoT Smart Home Monitor",
+      "type": "iot",
+      "description": "Sistem monitoring rumah pintar berbasis IoT dengan data real-time dan kontrol perangkat.",
+      "image": "/images/images-project/26271740509248.png",
+      "github": "https://github.com/username/iot-smart-home",
+      "website": "https://github.com/username/iot-smart-home",
+      "date": "Oktober 2023",
+      "tech": ["Arduino", "Node.js", "Socket.io", "MongoDB", "React"]
+    },
+    {
+        "id": 4,
+        "title": "IoT Smart Home Monitor",
+        "type": "backend",
+        "description": "Sistem monitoring rumah pintar berbasis IoT dengan data real-time dan kontrol perangkat.",
+        "image": "/images/images-project/26271740509248.png",
+        "github": "https://github.com/username/iot-smart-home",
+        "website": "https://github.com/username/iot-smart-home",
+        "date": "Oktober 2023",
+        "tech": ["Arduino", "Node.js", "Socket.io", "MongoDB", "React"]
+      }
+  ]
+  
