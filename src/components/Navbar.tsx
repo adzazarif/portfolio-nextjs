@@ -119,7 +119,7 @@ export default function Navbar() {
 
             {/* Modal Body */}
             <div className="p-4">
-              <embed src="/image/cv.pdf" type="application/pdf" className="w-full h-[80vh]" />
+              <embed src="/images/image/cv.pdf" type="application/pdf" className="w-full h-[80vh]" />
             </div>
           </div>
         </div>

@@ -213,13 +213,13 @@ export default function AchievementSection() {
           
           {/* Issuer */}
           <div className="flex items-center text-sm text-gray-300">
-            <User size={16} color="#00ffff" className="mr-2" />
+            <User size={16} className="mr-2 text-purple-400" />
             <span>{item.issuer}</span>
           </div>
           
           {/* Date */}
           <div className="flex items-center text-sm text-gray-400">
-            <Calendar size={16} color="#00ffff" className="mr-2" />
+            <Calendar size={16}className="mr-2 text-purple-400" />
             <span>{item.date}</span>
           </div>
          
@@ -269,7 +269,7 @@ export default function AchievementSection() {
             {item.title}
           </h4>
 
-          <p className="border p-2 rounded-2xl inline-block mb-2 text-sm text-cyan-500">By {item.institution}</p>
+          <p className="border p-2 rounded-2xl inline-block mb-2 text-sm text-purple-400">By {item.institution}</p>
           
           {/* Description */}
           <p className="text-gray-300 text-base mb-6 leading-relaxed">
@@ -279,11 +279,11 @@ export default function AchievementSection() {
           {/* Details Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
             <div className="flex items-center text-sm text-gray-400">
-              <MapPin size={18} className="inline-block text-cyan-400" />
+              <MapPin size={18} className="inline-block text-purple-400" />
               <span className="inline-block ml-2">{item.location}</span>
             </div>
             <div className="flex items-center text-sm text-gray-400">
-              <Calendar size={18} className="inline-block text-cyan-400" />
+              <Calendar size={18} className="inline-block text-purple-400" />
               <span className="inline-block ml-2">{item.date}</span>
             </div>
           </div>
