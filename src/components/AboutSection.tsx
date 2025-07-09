@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Linkedin, Mail, Phone, Map } from "lucide-react";
+import { Linkedin, Phone, Map } from "lucide-react";
 import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,6 +18,8 @@ export default function AboutSection() {
     { id: "skill", label: "Skill" },
     { id: "tools", label: "Tools" },
   ];
+
+  
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -71,7 +73,7 @@ export default function AboutSection() {
       clearTimeout(timeoutId);
       observer.disconnect();
     };
-  }, []);
+  }, [sections]);
 
   useEffect(() => {
     if (!scrollContainerRef.current || !sectionRef.current) return;
@@ -314,7 +316,7 @@ export default function AboutSection() {
         {/* Mobile Navigation - Dot indicators */}
         <div className="md:hidden fixed right-4 top-1/2 transform -translate-y-1/2 z-20">
           <div className="flex flex-col items-center space-y-4">
-            {sections.map((section, idx) => (
+            {sections.map((section) => (
               <button
                 key={section.id}
                 className={`w-3 h-3 rounded-full border-2 transition-all duration-300 relative group
@@ -400,9 +402,9 @@ export default function AboutSection() {
                   {/* Stats */}
                   <div className="grid grid-cols-3 mb-8 gap-6">
                     {[
-                      { number: "50+", label: "Projects" },
-                      { number: "3+", label: "Years" },
-                      { number: "100%", label: "Satisfied" },
+                      { number: "10+", label: "Projek" },
+                      { number: "5+", label: "Lomba" },
+                      { number: "15+", label: "Sertifikat" },
                     ].map((stat, index) => (
                       <div key={index} className="text-center">
                         <div className="text-2xl font-bold text-white">

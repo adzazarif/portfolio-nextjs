@@ -7,9 +7,10 @@
     "Tailwind CSS": "border-cyan-400 text-cyan-400 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 hover:from-cyan-400/30 hover:to-blue-400/30 font-semibold shadow-lg shadow-cyan-400/25",
     "Bootstrap": "border-purple-500 text-purple-500 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 hover:from-purple-500/30 hover:to-indigo-500/30 font-semibold shadow-lg shadow-purple-500/25",
     "Sass": "border-pink-400 text-pink-400 bg-gradient-to-r from-pink-400/20 to-rose-400/20 hover:from-pink-400/30 hover:to-rose-400/30 font-semibold shadow-lg shadow-pink-400/25",
-    "CSS3": "border-blue-500 text-blue-500 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 hover:from-blue-500/30 hover:to-indigo-500/30 font-semibold shadow-lg shadow-blue-500/25",
+    "CSS": "border-blue-500 text-blue-500 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 hover:from-blue-500/30 hover:to-indigo-500/30 font-semibold shadow-lg shadow-blue-500/25",
     "Node.js": "border-green-500 text-green-500 bg-gradient-to-r from-green-500/20 to-emerald-500/20 hover:from-green-500/30 hover:to-emerald-500/30 font-semibold shadow-lg shadow-green-500/25",
     "Express.js": "border-gray-400 text-gray-400 bg-gradient-to-r from-gray-400/20 to-slate-400/20 hover:from-gray-400/30 hover:to-slate-400/30 font-semibold shadow-lg shadow-gray-400/25",
+    "Hapi": "border-gray-400 text-gray-400 bg-gradient-to-r from-gray-400/20 to-slate-400/20 hover:from-gray-400/30 hover:to-slate-400/30 font-semibold shadow-lg shadow-gray-400/25",
     "Express Js": "border-gray-400 text-gray-400 bg-gradient-to-r from-gray-400/20 to-slate-400/20 hover:from-gray-400/30 hover:to-slate-400/30 font-semibold shadow-lg shadow-gray-400/25",
     "Django": "border-green-600 text-green-600 bg-gradient-to-r from-green-600/20 to-teal-600/20 hover:from-green-600/30 hover:to-teal-600/30 font-semibold shadow-lg shadow-green-600/25",
     "Flask": "border-gray-300 text-gray-300 bg-gradient-to-r from-gray-300/20 to-stone-300/20 hover:from-gray-300/30 hover:to-stone-300/30 font-semibold shadow-lg shadow-gray-300/25",
@@ -19,6 +20,7 @@
     "TypeScript": "border-blue-400 text-blue-400 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 hover:from-blue-400/30 hover:to-indigo-400/30 font-semibold shadow-lg shadow-blue-400/25",
     "Python": "border-blue-500 text-blue-500 bg-gradient-to-r from-blue-500/20 to-yellow-500/20 hover:from-blue-500/30 hover:to-yellow-500/30 font-semibold shadow-lg shadow-blue-500/25",
     "Java": "border-orange-600 text-orange-600 bg-gradient-to-r from-orange-600/20 to-red-600/20 hover:from-orange-600/30 hover:to-red-600/30 font-semibold shadow-lg shadow-orange-600/25",
+    "Laravel": "border-orange-600 text-orange-600 bg-gradient-to-r from-orange-600/20 to-red-600/20 hover:from-orange-600/30 hover:to-red-600/30 font-semibold shadow-lg shadow-orange-600/25",
     "C++": "border-blue-600 text-blue-600 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 hover:from-blue-600/30 hover:to-indigo-600/30 font-semibold shadow-lg shadow-blue-600/25",
     "C#": "border-purple-600 text-purple-600 bg-gradient-to-r from-purple-600/20 to-blue-600/20 hover:from-purple-600/30 hover:to-blue-600/30 font-semibold shadow-lg shadow-purple-600/25",
     "PHP": "border-purple-400 text-purple-400 bg-gradient-to-r from-purple-400/20 to-indigo-400/20 hover:from-purple-400/30 hover:to-indigo-400/30 font-semibold shadow-lg shadow-purple-400/25",
@@ -61,5 +63,9 @@
     "Webpack": "border-blue-400 text-blue-400 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 hover:from-blue-400/30 hover:to-cyan-400/30 font-semibold shadow-lg shadow-blue-400/25",
     "Vite": "border-purple-500 text-purple-500 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 font-semibold shadow-lg shadow-purple-500/25",
     "Parcel": "border-amber-600 text-amber-600 bg-gradient-to-r from-amber-600/20 to-orange-600/20 hover:from-amber-600/30 hover:to-orange-600/30 font-semibold shadow-lg shadow-amber-600/25",
-    "default": "border-gray-700 text-gray-300 bg-gradient-to-r from-gray-700/20 to-slate-700/20 hover:from-gray-700/30 hover:to-slate-700/30 font-medium shadow-lg shadow-gray-700/25"
+    "default": "border-gray-700 text-gray-300 bg-gradient-to-r from-gray-700/20 to-slate-700/20 hover:from-gray-700/30 hover:to-slate-700/30 font-medium shadow-lg shadow-gray-700/25",
+    "JQuery": "border-gray-700 text-gray-300 bg-gradient-to-r from-gray-700/20 to-slate-700/20 hover:from-gray-700/30 hover:to-slate-700/30 font-medium shadow-lg shadow-gray-700/25",
+    "Web Socket": "border-cyan-400 text-cyan-400 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 hover:from-cyan-400/30 hover:to-blue-400/30 font-semibold shadow-lg shadow-cyan-400/25",
+    "PWA": "border-gray-700 text-gray-300 bg-gradient-to-r from-gray-700/20 to-slate-700/20 hover:from-gray-700/30 hover:to-slate-700/30 font-medium shadow-lg shadow-gray-700/25",
+    "Midtrans": "border-blue-500 text-blue-500 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 hover:from-blue-500/30 hover:to-indigo-500/30 font-semibold shadow-lg shadow-blue-500/25"
   }

@@ -4,14 +4,14 @@ import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("home");
 
   const backgroundRef = useRef<HTMLDivElement | null>(null);
   const menuRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
 
-  const updateBackgroundPosition = (id: string) => {
+  const updateBackgroundPosition = (id: string): void => {
     const el = menuRefs.current[id];
     const bg = backgroundRef.current;
 
@@ -28,29 +28,63 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const sections = ["home", "abouts", "achievement", "project"];
-    const observers: IntersectionObserver[] = [];
+    const sections = ["home", "abouts", "achievement", "project", "contact"];
 
-    sections.forEach((id) => {
-      const section = document.getElementById(id);
-      if (!section) return;
+    const handleScroll = (): void => {
+      const scrollPosition = window.scrollY + 100;
+      let currentSection = "home";
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActiveSection(id);
-            updateBackgroundPosition(id);
+      if (scrollPosition < 300) {
+        currentSection = "home";
+      } else {
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const sectionId = sections[i];
+          const section = document.getElementById(sectionId);
+
+          if (section) {
+            const sectionTop = section.offsetTop - 150;
+            if (scrollPosition >= sectionTop) {
+              currentSection = sectionId;
+              break;
+            }
           }
-        },
-        { threshold: 0.3 }
-      );
+        }
+      }
 
-      observer.observe(section);
-      observers.push(observer);
-    });
+      if (currentSection !== activeSection) {
+        setActiveSection(currentSection);
+        updateBackgroundPosition(currentSection);
+      }
+    };
 
-    return () => observers.forEach((observer) => observer.disconnect());
-  }, []);
+    handleScroll();
+
+    let ticking = false;
+    const throttledScroll = (): void => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", throttledScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", throttledScroll);
+    };
+  }, [activeSection]);
+
+  const handleNavClick = (sectionId: string): void => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const navbarHeight = 80;
+      const targetPosition = section.offsetTop - navbarHeight;
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -69,10 +103,9 @@ export default function Navbar() {
             >
               Resume
             </button>
-
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:text-cyan-400:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:text-cyan-400 focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-expanded={isMobileMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
@@ -88,35 +121,29 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div
-            className={`items-center justify-between ${
-              isMobileMenuOpen ? "" : "hidden"
-            } w-full md:flex md:w-auto md:order-1`}
-          >
+          <div className={`items-center justify-between ${isMobileMenuOpen ? "" : "hidden"} w-full md:flex md:w-auto md:order-1`}>
             <ul className="relative md:flex md:flex-row flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-4 md:mt-0 md:border-0 rtl:space-x-reverse">
-              {/* Sliding background hanya di desktop */}
               <div
                 ref={backgroundRef}
                 className="absolute z-[-1] bg-gradient-to-r from-cyan-500/30 to-purple-500/30 border border-cyan-300 rounded-2xl shadow-[0_0_10px_#00ffff] transition-all duration-300 ease-in-out hidden md:block"
-                style={{
-                  transform: "translateX(0px)",
-                  width: 0,
-                  height: 0,
-                }}
+                style={{ transform: "translateX(0px)", width: 0, height: 0 }}
               />
-
-              {["home", "abouts", "achievement", "project"].map((id) => (
+              {["home", "abouts", "achievement", "project", "contact"].map((id) => (
                 <li key={id}>
                   <a
                     href={`#${id}`}
-                    ref={(el) => (menuRefs.current[id] = el)}
+                    ref={(el) => {
+                      menuRefs.current[id] = el;
+                    }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick(id);
+                    }}
                     className={`block py-2 px-4 duration-300 rounded-2xl relative z-10 ${
-                      activeSection === id
-                        ? "text-white"
-                        : "text-white hover:text-cyan-400"
+                      activeSection === id ? "text-white" : "text-white hover:text-cyan-400"
                     }`}
                   >
-                    {id.charAt(0).toUpperCase() + id.slice(1)}
+                    {id === "abouts" ? "About" : id.charAt(0).toUpperCase() + id.slice(1)}
                   </a>
                 </li>
               ))}
@@ -129,9 +156,7 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50">
           <div className="relative bg-white rounded-lg shadow-sm dark:bg-gray-700 max-w-3xl w-full p-4">
             <div className="flex items-center justify-between p-4 border-b dark:border-gray-600 border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Resume
-              </h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Resume</h3>
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -154,11 +179,7 @@ export default function Navbar() {
               </button>
             </div>
             <div className="p-4">
-              <embed
-                src="/images/image/cv.pdf"
-                type="application/pdf"
-                className="w-full h-[80vh]"
-              />
+              <embed src="/images/image/cv.pdf" type="application/pdf" className="w-full h-[80vh]" />
             </div>
           </div>
         </div>

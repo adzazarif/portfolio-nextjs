@@ -55,11 +55,25 @@
     },
     {
       "id": 4,
+      "rank": "Cooming Soon",
+      "title": "Olivia X UB 2025",
+      "description": "-",
+      "institution": "Universita Brawijaya",
+      "location": "Malang, Jawa Timur, Indonesia",
+      "date": "Juli 2024",
+      "color": "bg-purple-400/20 border-purple-400/40 text-purple-300",
+      "emoji": "⏱️",
+      "images": [
+        
+      ]
+    },
+    {
+      "id": 5,
       "rank": "Harapan 1",
       "title": "TIF Exibition 2024",
       "description": "Saya berhasil meraih harapan 1 dalam kompetisi TIF Exibition 2024 yang di adakan oleh Jurusan Teknologi Informasi Politeknik Negeri Jember. Proyek ini saya buat untuk project semester akhir, yang mencakup pembuatan website menggunakan Laravel, Tailwind CSS, dan jQuery.",
       "institution": "Politeknik Negeri Jember",
-      "location": "Surabaya, Jawa Timur, Indonesia",
+      "location": "Jember, Jawa Timur, Indonesia",
       "date": "Mei 2024",
       "color": "bg-purple-400/20 border-purple-400/40 text-purple-300",
       "emoji": "🎖️",
@@ -122,10 +136,10 @@
     },
     {
       "id": 8,
-      "title": "Belajar Dasar Pemograman Web",
+      "title": "Front-end & Back-end Coding Camp 2025",
       "issuer": "Dicoding",
       "date": "Juli 2025",
-      "image": "/images/image/sertifikat/dicoding2.png"
+      "image": "/images/image/sertifikat/coding-camp.png"
     },
     {
       "id": 9,

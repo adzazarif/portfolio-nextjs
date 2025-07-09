@@ -1,47 +1,130 @@
 [
-    {
-      "id": 1,
-      "title": "Smart Workshop Finder",
-      "type": "fullstack",
-      "description": "Platform untuk menemukan bengkel terdekat dengan fitur pencarian berbasis lokasi dan filter layanan.",
-      "image": "/images/images-project/26271740509248.png",
-      "github": "https://github.com/username/smart-workshop-finder",
-      "website": "https://smartworkshopfinder.vercel.app",
-      "date": "Juni 2023",
-      "tech": ["Next.js", "Tailwind CSS", "Express.js", "MySQL", "Leaflet"]
-    },
-    {
-      "id": 2,
-      "title": "EduChart Dashboard",
-      "type": "frontend",
-      "description": "Dashboard visualisasi data untuk pelajar dengan grafik interaktif dan fitur autentikasi.",
-      "image": "/images/images-project/26271740509248.png",
-      "github": "https://github.com/username/educhart-dashboard",
-      "website": "https://educhart.vercel.app",
-      "date": "Agustus 2023",
-      "tech": ["React", "Tailwind CSS", "Firebase", "Chart.js"]
-    },
-    {
-      "id": 3,
-      "title": "IoT Smart Home Monitor",
-      "type": "iot",
-      "description": "Sistem monitoring rumah pintar berbasis IoT dengan data real-time dan kontrol perangkat.",
-      "image": "/images/images-project/26271740509248.png",
-      "github": "https://github.com/username/iot-smart-home",
-      "website": "https://github.com/username/iot-smart-home",
-      "date": "Oktober 2023",
-      "tech": ["Arduino", "Node.js", "Socket.io", "MongoDB", "React"]
-    },
-    {
-        "id": 4,
-        "title": "IoT Smart Home Monitor",
-        "type": "backend",
-        "description": "Sistem monitoring rumah pintar berbasis IoT dengan data real-time dan kontrol perangkat.",
-        "image": "/images/images-project/26271740509248.png",
-        "github": "https://github.com/username/iot-smart-home",
-        "website": "https://github.com/username/iot-smart-home",
-        "date": "Oktober 2023",
-        "tech": ["Arduino", "Node.js", "Socket.io", "MongoDB", "React"]
-      }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Fix Point",
+    "type": ["fullstack","backend"],
+    "description": "FixPoint adalah platform web yang membantu pengendara saat kendaraan mengalami gangguan. FixPoint memungkinkan pencarian bengkel dan layanan towing secara real-time . ",
+    "image": "/images/images-project/fixpoint.png",
+    "github": "https://github.com/fix-point-dbs/",
+    "website": "https://fixpoint.adza-zarif.my.id/",
+    "date": "Juni 2025",
+    "tech": [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Hapi",
+      "MySQL",
+      "Leaflet",
+      "Socket.io",
+      "PWA"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Website Travel Umrah",
+    "type": ["fullstack"],
+    "description": "Aplikasi Sistem Pemesanan Rahmatan travel adalah sebuah aplikasi untuk memesan sebuah tiket umrah atau haji dengan online yang pastinya aman dan terpercaya. Aplikasi ini dibuat untuk memudahkan pengguna dalam memesan tiket maupun melihat informasi pada travel rahmatan.",
+    "image": "/images/images-project/umrah.png",
+    "github": "https://github.com/Attar-Team/AppRahmatanTravel",
+    "website": "-",
+    "date": "Desember 2023",
+    "tech": ["Boostrap", "Midtrans", "JQuery", "PHP", "MySQL"]
+  },
+  {
+    "id": 3,
+    "title": "Bimbel BUMN Muda",
+    "type": ["fullstack"],
+    "description": "BUMNMUDA adalah sebuah inisiatif yang bertujuan untuk menyediakan platform pembelajaran online khusus bagi calon pegawai Badan Usaha Milik Negara (BUMN). Mengingat tingginya persaingan dalam ujian masuk BUMN, BUMNMUDA hadir untuk memberikan bimbingan yang terstruktur dan berbasis website dan aplikasi mobile kepada para peserta ujian",
+    "image": "/images/images-project/bimbel.png",
+    "github": "https://github.com/Attar-Team/WebBimbelUjian",
+    "website": "-",
+    "date": "Juni 2024",
+    "tech": ["Laravel", "Boostrap", "MySQL", "JQuery", "PHP", "Midtrans"]
+  },
+  {
+    "id": 4,
+    "title": "IOTIK Smart Incubator",
+    "type": ["fullstack","iot"],
+    "description": "Alat penetasan telur otomatis untuk mengoptimalkan proses penetasan dengan mengontrol suhu dan kelembaban. Alat ini juga dilengkapi kamera untuk mendeteksi embrio pada telur yang dalam masa proses penetasan.",
+    "image": "/images/images-project/iotik.png",
+    "github": "https://github.com/iotik-lab/iotik-website",
+    "website": "-",
+    "date": "Desember 2024",
+    "tech": [
+      "Laravel",
+      "Arduino",
+      "Tailwind CSS",
+      "Socket.io",
+      "MySQL",
+      "ESP32"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Smart Mitigation",
+    "type": ["fullstack"],
+    "description": "Smart Mitigation merupakan aplikasi berbasis website yang menggabungkan sistem deteksi banjir berbasis AI yang menggunakan model machine learning . Sistem mitigasi ini terintegrasi dengan sistem penanggulanan bencana seperti sistem donasi yang tepat sasaran untuk korban bencana alam. Website ini menggabungkan beberapa komponen penting dalam penanganan bencana alam: prediksi dini, laporan bencana, dan penyediaan bantuan yang efektif.",
+    "image": "/images/images-project/smart-mitigation.png",
+    "github": "-",
+    "website": "https://cozifar-team.site",
+    "date": "Desember 2024",
+    "tech": [
+      "Laravel",
+      "Python",
+      "Tailwind CSS",
+      "Leaflet",
+      "MySQL",
+      "Midtrans",
+      "JQuery"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "KSP Logistics",
+    "type": ["frontend"],
+    "description": "Ini adalah website portfolio perusahaan Kilau Sri Purnama yang bergerak di bidang transportasi darat. Dalam website ini terdapat banyak informasi yang diberikan seperti tentang perusahaan, visi misi, layanan, kontak, dan lainnya.",
+    "image": "/images/images-project/ksp.png",
+    "github": "-",
+    "website": "https://ksplogistics.co.id/",
+    "date": "Agustus 2024",
+    "tech": ["HTML", "Boostrap", "CSS", "JavaScript"]
+  },
+  {
+    "id": 7,
+    "title": "Thalassa Blue",
+    "type": ["fullstack"],
+    "description": "Thalassa blue adalah perusahaan yang bergerak di bidang transportasi laut dan wisata. Website ini bertujuan untuk membuat pembelian tiket sped boat dan wisata secara online untuk memudahkan para wisatawan. Pembayaran nya sudah menggunakan payment gateway tentunya ini sangat aman dan cepat.",
+    "image": "/images/images-project/thalassa.png",
+    "github": "-",
+    "website": "https://thalassablue.id/",
+    "date": "Agustus 2024",
+    "tech": [
+      "Laravel",
+      "JQuery",
+      "Tailwind CSS",
+      "Midtrans",
+      "MySQL",
+      "JavaScript",
+      "PHP"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Donasi UKT",
+    "type": ["fullstack"],
+    "description": "DONASI UKT untuk membantu mahasiswa yang memiliki kesulitan secara finansial. Aplikasi ini menyediakan platform yang terintegrasi sehingga memungkinkan para individu, alumni, organisasi untuk membantu atau mendonasikan dana terhadap para mahasiswa dari keluarga kurang mampu sehingga diharapkan para mahasiswa dapat melanjutkan pendidikan ke tingkat yang lebih tinggi tanpa khawatir mengenai biaya pendidikan yang cukup tinggi.",
+    "image": "/images/images-project/ukt.png",
+    "github": "-",
+    "website": "https://github.com/Hackaton-SDGs-2024-Cozifar-Team/donasi-ukt-hackaton",
+    "date": "Agustus 2024",
+    "tech": [
+      "Laravel",
+      "JQuery",
+      "Tailwind CSS",
+      "Midtrans",
+      "MySQL",
+      "JavaScript",
+      "PHP"
+    ]
+  }
+]
