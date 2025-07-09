@@ -325,6 +325,10 @@ export default function AchievementSection() {
 
       {/* Hover Animation Line */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl"></div>
+
+      {/* Decorative Corner */}
+      <div className="absolute top-0 right-0 w-24 h-20 bg-gradient-to-br from-cyan-400/10 to-transparent rounded-bl-full"></div>
+              <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-purple-400/10 to-transparent rounded-tr-full"></div>
     </div>
   );
 

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Linkedin, Mail, Phone, Map } from "lucide-react";
-
+import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSection() {
@@ -236,42 +236,41 @@ export default function AboutSection() {
       className="relative h-screen max-w-screen-2xl m-auto px-0 md:px-24 bg-[#0B0D14] text-white font-mono flex flex-col justify-center"
       id="home"
     >
-<header className="relative flex items-center justify-center pt-0 pb-8 px-4 sm:px-0 max-w-screen-lg mx-auto">
-  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent blur-xl"></div>
+      <header className="relative flex items-center justify-center pt-0 pb-8 px-4 sm:px-0 max-w-screen-lg mx-auto">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent blur-xl"></div>
 
-  {/* Garis kiri */}
-  <div className="hidden sm:flex relative items-center">
-    <div className="w-20 h-[1px] bg-gradient-to-r from-transparent to-gray-400"></div>
-    <div className="w-32 h-[2px] bg-gradient-to-r from-gray-400 via-cyan-400 to-gray-400"></div>
-    <div className="w-16 h-[1px] bg-gradient-to-r from-gray-400 to-transparent"></div>
-  </div>
+        {/* Garis kiri */}
+        <div className="hidden sm:flex relative items-center">
+          <div className="w-20 h-[1px] bg-gradient-to-r from-transparent to-gray-400"></div>
+          <div className="w-32 h-[2px] bg-gradient-to-r from-gray-400 via-cyan-400 to-gray-400"></div>
+          <div className="w-16 h-[1px] bg-gradient-to-r from-gray-400 to-transparent"></div>
+        </div>
 
-  {/* Konten tengah */}
-  <div className="relative bg-black/20 backdrop-blur-sm border border-cyan-400/20 rounded-2xl px-4 sm:px-8 py-6 mx-2 sm:mx-6 w-full max-w-2xl">
-    <div className="absolute inset-0 bg-gradient-to-b from-cyan-400/5 to-transparent rounded-2xl"></div>
-    <div className="relative z-10 text-center">
-      <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent mb-3">
-        About Me
-      </h2>
-      <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-        Mengenal lebih dalam tentang pengalaman, keahlian, dan tools saya
-      </p>
-      <div className="flex justify-center space-x-2 mt-4">
-        <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
-        <div className="w-2 h-2 rounded-full bg-cyan-400/60 animate-pulse delay-100"></div>
-        <div className="w-2 h-2 rounded-full bg-cyan-400/30 animate-pulse delay-200"></div>
-      </div>
-    </div>
-  </div>
+        {/* Konten tengah */}
+        <div className="relative bg-black/20 backdrop-blur-sm border border-cyan-400/20 rounded-2xl px-4 sm:px-8 py-6 mx-2 sm:mx-6 w-full max-w-2xl">
+          <div className="absolute inset-0 bg-gradient-to-b from-cyan-400/5 to-transparent rounded-2xl"></div>
+          <div className="relative z-10 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent mb-3">
+              About Me
+            </h2>
+            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+              Mengenal lebih dalam tentang pengalaman, keahlian, dan tools saya
+            </p>
+            <div className="flex justify-center space-x-2 mt-4">
+              <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
+              <div className="w-2 h-2 rounded-full bg-cyan-400/60 animate-pulse delay-100"></div>
+              <div className="w-2 h-2 rounded-full bg-cyan-400/30 animate-pulse delay-200"></div>
+            </div>
+          </div>
+        </div>
 
-  {/* Garis kanan */}
-  <div className="hidden sm:flex relative items-center">
-    <div className="w-16 h-[1px] bg-gradient-to-r from-transparent to-gray-400"></div>
-    <div className="w-32 h-[2px] bg-gradient-to-r from-gray-400 via-cyan-400 to-gray-400"></div>
-    <div className="w-20 h-[1px] bg-gradient-to-r from-gray-400 to-transparent"></div>
-  </div>
-</header>
-
+        {/* Garis kanan */}
+        <div className="hidden sm:flex relative items-center">
+          <div className="w-16 h-[1px] bg-gradient-to-r from-transparent to-gray-400"></div>
+          <div className="w-32 h-[2px] bg-gradient-to-r from-gray-400 via-cyan-400 to-gray-400"></div>
+          <div className="w-20 h-[1px] bg-gradient-to-r from-gray-400 to-transparent"></div>
+        </div>
+      </header>
 
       <div className="flex gap-10 px-5 md:px-16 h-[60vh] md:h-[80vh] overflow-hidden">
         {/* Desktop Navigation - Hidden on mobile */}
@@ -288,7 +287,7 @@ export default function AboutSection() {
                 className={`rounded-xl px-6 py-3 border w-[150px] flex items-center justify-center transition-all duration-300
                 ${
                   activeSection === section.id
-                    ? "border-cyan-400 shadow-[0_0_15px_#00ffff] text-white"
+                    ? "border-cyan-400 shadow-[0_0_15px_#00ffff] text-white bg-gradient-to-r from-cyan-500 to-purple-500"
                     : "border-gray-400 text-white"
                 } bg-[#0d1117]`}
                 onClick={() => {
@@ -345,64 +344,99 @@ export default function AboutSection() {
         >
           <article
             id="tentang"
-            className={`scroll-snap-start border rounded-lg p-4 md:p-6 scroll-mt-20 transition-all duration-300 ${
+            className={`scroll-snap-start relative overflow-hidden rounded-2xl p-6 md:p-8 scroll-mt-20 transition-all duration-500 ${
               activeSection === "tentang"
-                ? "border-cyan-400 shadow-[0_0_15px_#00ffff]"
-                : "border-gray-500 shadow-lg"
-            }`}
+                ? "border-2 border-cyan-400 shadow-[0_0_25px_rgba(6,182,212,0.4)]"
+                : "border border-gray-600 shadow-xl bg-gradient-to-br from-gray-900/90 to-gray-800/90 hover:border-gray-500"
+            } backdrop-blur-sm`}
           >
-            <h3 className="text-xl font-bold mb-4 text-white">Tentang</h3>
-            <p className="leading-relaxed text-gray-300 text-sm md:text-base">
-              Saya Adza Zarif Nur Iskandar seorang mahasiswa semester 6
-              Teknologi Informasi di Politeknik Negeri Jember dan sudah terjun
-              di bidang IT dengan pengalaman 3+ tahun yang berfokus dalam
-              pengembangan aplikasi website. Dalam Kecintaan saya pada perangkat
-              lunak menjadi bahan bakar semangat untuk terus belajar dan
-              berkembang. Selain itu, saya suka mencoba hal-hal baru, yang
-              membuat saya terus memperluas wawasan dan keterampilan. Saya siap
-              membuat aplikasi untuk kebutuhan dan fungsionalitas pengguna untuk
-              meningkatkan produktifitas dan efisiensi pekerjaan.
-            </p>
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_70%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(6,182,212,0.05)_50%,transparent_75%)] bg-[length:20px_20px]" />
+            </div>
 
-            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 mt-4">
-              <div className="flex items-center gap-2">
-                <Mail className="text-[20px] md:text-[25px] text-white flex-shrink-0" />
-                <a
-                  target="_blank"
-                  href="https://mail.com/adzazarf@gmail.com"
-                  rel="noopener noreferrer"
-                  className="text-white text-sm md:text-base break-all"
-                >
-                  adzazarf@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="text-[20px] md:text-[25px] text-white flex-shrink-0" />
-                <a
-                  target="_blank"
-                  href="https://github.com/adzazarif"
-                  rel="noopener noreferrer"
-                  className="text-white text-sm md:text-base"
-                >
-                  085942972801
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Linkedin className="text-[20px] md:text-[25px] text-white flex-shrink-0" />
-                <a
-                  target="_blank"
-                  href="https://linkedin.com/in/adzazarif/"
-                  rel="noopener noreferrer"
-                  className="text-white text-sm md:text-base"
-                >
-                  Adza Zarif Nur I
-                </a>
+            {/* Header */}
+            <div className="relative flex items-center gap-4 mb-6">
+              <div>
+                <h3 className="text-2xl md:text-2xl font-bold text-white mb-1">
+                  Tentang Saya
+                </h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
               </div>
             </div>
-            <div className="flex items-center gap-2 mt-2">
-              <Map className="text-[20px] md:text-[25px] text-white flex-shrink-0" />
-              <p className="text-white text-sm md:text-base">
-                Desa Mronjo Kec Selopuro Kab Blitar
+
+            {/* Main Content */}
+            <div className="relative space-y-6">
+              {/* Profile Card */}
+              <div className="flex flex-col lg:flex-row gap-6">
+                <div className="lg:w-1/3">
+                  <div className="bg-gradient-to-r from-cyan-400 to-purple-500 p-0.5 rounded-xl">
+                    <div className="bg-gray-800 rounded-xl p-4 text-center">
+                      {/* <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        
+                      </div> */}
+                      <Image 
+                          src="/images/profile2.png"
+                          alt="Profile"
+                          width={80}
+                          height={80}
+                          className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center object-cover"
+                        />
+                      <h1 className="text-white font-semibold text-lg mb-1">
+                        Adza Zarif Nur Iskandar
+                      </h1>
+                      <p className="text-cyan-400 text-sm">
+                        Teknologi Informasi
+                      </p>
+                      <p className="text-gray-400 text-xs">
+                        Politeknik Negeri Jember
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="lg:w-2/3">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-cyan-400/20 rounded-full flex items-center justify-center">
+                        <Phone className="w-4 h-4 text-cyan-400" />
+                      </div>
+                      <span className="text-gray-300">
+                        Semester 6 - Teknologi Informasi
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-cyan-400/20 rounded-full flex items-center justify-center">
+                        <Linkedin className="w-4 h-4 text-cyan-400" />
+                      </div>
+                      <span className="text-gray-300">3+ Tahun Pengalaman</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-cyan-400/20 rounded-full flex items-center justify-center">
+                        <Map className="w-4 h-4 text-cyan-400" />
+                      </div>
+                      <span className="text-gray-300">
+                        Fokus Pengembangan Website
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Description */}
+
+              <p className="leading-relaxed text-gray-300 text-sm md:text-base">
+                Saya Adza Zarif Nur Iskandar seorang mahasiswa semester 6
+                Teknologi Informasi di Politeknik Negeri Jember dan sudah terjun
+                di bidang IT dengan pengalaman 3+ tahun yang berfokus dalam
+                pengembangan aplikasi website. Dalam Kecintaan saya pada
+                perangkat lunak menjadi bahan bakar semangat untuk terus belajar
+                dan berkembang. Selain itu, saya suka mencoba hal-hal baru, yang
+                membuat saya terus memperluas wawasan dan keterampilan. Saya
+                siap membuat aplikasi untuk kebutuhan dan fungsionalitas
+                pengguna untuk meningkatkan produktifitas dan efisiensi
+                pekerjaan.
               </p>
             </div>
           </article>
@@ -415,16 +449,24 @@ export default function AboutSection() {
                 : "border-gray-500 shadow-lg"
             }`}
           >
-            <h3 className="text-xl font-bold mb-4">Pengalaman</h3>
+            {/* Header */}
+            <div className="relative flex items-center gap-4 mb-0">
+              <div>
+                <h3 className="text-2xl md:text-2xl font-bold text-white mb-0">
+                  Pengalaman
+                </h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
+              </div>
+            </div>
 
             <div className="timeline-container flex flex-col items-center w-full space-y-8 bg-primary text-white py-6 md:py-12">
               <div className="relative w-full max-w-4xl">
-                <div className="timeline-line absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#06b6d4] origin-top"></div>
+                <div className="timeline-line absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-cyan-400 to-purple-500 origin-top"></div>
 
                 <div className="timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
                   <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
                   <div className="w-full md:w-1/2 text-center md:text-right md:pr-6">
-                    <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
                       <h3 className="font-bold text-base md:text-lg text-cyan-300">
                         Front-End & Back-End Developer (Studi Independent)
                       </h3>
@@ -444,16 +486,16 @@ export default function AboutSection() {
                   <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
                   <div className="hidden md:block md:w-1/2"></div>
                   <div className="w-full md:w-1/2 text-center md:text-left md:pl-6">
-                    <div className="bg-gradient-to-l from-cyan-500/10 to-blue-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                    <div className="bg-gradient-to-l from-cyan-500/10 to-purple-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
                       <h3 className="font-bold text-base md:text-lg text-cyan-300">
                         Fullstack Web Developer
                       </h3>
                       <p className="text-xs md:text-sm text-gray-400 mb-2">
-                        Thalassa Blue (2024 - Now)
+                        Thalassa Blue (2024 - 2025)
                       </p>
                       <p className="text-xs md:text-sm text-gray-300">
                         Membuat aplilasi pemesanan boat dan trip untuk
-                        perusahaan Thalassa Blue
+                        perusahaan Thalassa purple
                       </p>
                     </div>
                   </div>
@@ -462,7 +504,7 @@ export default function AboutSection() {
                 <div className="timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 mt-12">
                   <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
                   <div className="w-full md:w-1/2 text-center md:text-right md:pr-6">
-                    <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
                       <h3 className="font-bold text-base md:text-lg text-cyan-300">
                         Front End Web Developer
                       </h3>
@@ -482,7 +524,7 @@ export default function AboutSection() {
                   <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
                   <div className="hidden md:block md:w-1/2"></div>
                   <div className="w-full md:w-1/2 text-center md:text-left md:pl-6">
-                    <div className="bg-gradient-to-l from-cyan-500/10 to-blue-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                    <div className="bg-gradient-to-l from-cyan-500/10 to-purple-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
                       <h3 className="font-bold text-base md:text-lg text-cyan-300">
                         Front End Web Developer
                       </h3>
@@ -508,13 +550,21 @@ export default function AboutSection() {
                 : "border-gray-500 shadow-lg"
             }`}
           >
-            <h3 className="text-xl font-bold mb-4">Skill</h3>
+            {/* Header */}
+            <div className="relative flex items-center gap-4 mb-4">
+              <div>
+                <h3 className="text-2xl md:text-2xl font-bold text-white mb-0">
+                  Skill
+                </h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
+              </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-4 rounded-lg border border-gray-600">
+              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">Frontend</h4>
                 <div className="space-y-2">
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
-                    <div className="w-6 h-6 bg-gradient-to-r from-blue-400 to-blue-600 rounded flex items-center justify-center">
+                    <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-purple-600 rounded flex items-center justify-center">
                       <span className="text-white text-xs font-bold">R</span>
                     </div>
                     <span className="text-sm text-gray-300">React.js</span>
@@ -526,16 +576,16 @@ export default function AboutSection() {
                     <span className="text-sm text-gray-300">Next.js</span>
                   </div>
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
-                    <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-green-600 rounded flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">V</span>
-                    </div>
-                    <span className="text-sm text-gray-300">Vue.js</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
                     <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded flex items-center justify-center">
                       <span className="text-white text-xs font-bold">T</span>
                     </div>
                     <span className="text-sm text-gray-300">Tailwind CSS</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
+                    <div className="w-6 h-6 bg-gradient-to-r from-purple-600 to-purple-800 rounded flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">B</span>
+                    </div>
+                    <span className="text-sm text-gray-300">Boostrap</span>
                   </div>
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
                     <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded flex items-center justify-center">
@@ -544,14 +594,15 @@ export default function AboutSection() {
                     <span className="text-sm text-gray-300">JavaScript</span>
                   </div>
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
-                    <div className="w-6 h-6 bg-gradient-to-r from-blue-600 to-blue-800 rounded flex items-center justify-center">
+                    <div className="w-6 h-6 bg-gradient-to-r from-purple-600 to-purple-800 rounded flex items-center justify-center">
                       <span className="text-white text-xs font-bold">TS</span>
                     </div>
                     <span className="text-sm text-gray-300">TypeScript</span>
                   </div>
                 </div>
               </div>
-              <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-4 rounded-lg border border-gray-600">
+              
+              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">Backend</h4>
                 <div className="space-y-2">
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
@@ -579,7 +630,7 @@ export default function AboutSection() {
                     <span className="text-sm text-gray-300">Laravel</span>
                   </div>
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
-                    <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-yellow-500 rounded flex items-center justify-center">
+                    <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-yellow-500 rounded flex items-center justify-center">
                       <span className="text-white text-xs font-bold">Py</span>
                     </div>
                     <span className="text-sm text-gray-300">Python</span>
@@ -592,32 +643,26 @@ export default function AboutSection() {
                   </div>
                 </div>
               </div>
-              <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-4 rounded-lg border border-gray-600">
+              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">Database</h4>
                 <div className="space-y-2">
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
-                    <div className="w-6 h-6 bg-gradient-to-r from-blue-600 to-orange-500 rounded flex items-center justify-center">
+                    <div className="w-6 h-6 bg-gradient-to-r from-purple-600 to-orange-500 rounded flex items-center justify-center">
                       <span className="text-white text-xs font-bold">My</span>
                     </div>
                     <span className="text-sm text-gray-300">MySQL</span>
                   </div>
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
-                    <div className="w-6 h-6 bg-gradient-to-r from-blue-800 to-blue-600 rounded flex items-center justify-center">
+                    <div className="w-6 h-6 bg-gradient-to-r from-purple-800 to-purple-600 rounded flex items-center justify-center">
                       <span className="text-white text-xs font-bold">Pg</span>
                     </div>
                     <span className="text-sm text-gray-300">PostgreSQL</span>
                   </div>
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
-                    <div className="w-6 h-6 bg-gradient-to-r from-green-600 to-green-800 rounded flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">M</span>
-                    </div>
-                    <span className="text-sm text-gray-300">MongoDB</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
                     <div className="w-6 h-6 bg-gradient-to-r from-yellow-500 to-orange-500 rounded flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">F</span>
+                      <span className="text-white text-xs font-bold">R</span>
                     </div>
-                    <span className="text-sm text-gray-300">Firebase</span>
+                    <span className="text-sm text-gray-300">Redis</span>
                   </div>
                 </div>
               </div>
@@ -632,15 +677,23 @@ export default function AboutSection() {
                 : "border-gray-500 shadow-lg"
             }`}
           >
-            <h3 className="text-xl font-bold mb-4">Tools & Software</h3>
+            {/* Header */}
+            <div className="relative flex items-center gap-4 mb-4">
+              <div>
+                <h3 className="text-2xl md:text-2xl font-bold text-white mb-0">
+                  Tools & Software
+                </h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
+              </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-4 rounded-lg border border-gray-600">
+              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">
                   Development Tools
                 </h4>
                 <div className="grid grid-cols-2 gap-2">
                   <div className="flex items-center gap-2 p-2 bg-gray-900 rounded">
-                    <div className="w-3 h-3 bg-blue-500 rounded"></div>
+                    <div className="w-3 h-3 bg-purple-500 rounded"></div>
                     <span className="text-sm text-gray-300">VS Code</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 bg-gray-900 rounded">
@@ -658,7 +711,7 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-4 rounded-lg border border-gray-600">
+              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">
                   Design Tools
                 </h4>
@@ -668,7 +721,7 @@ export default function AboutSection() {
                     <span className="text-sm text-gray-300">Figma</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 bg-gray-900 rounded">
-                    <div className="w-3 h-3 bg-blue-600 rounded"></div>
+                    <div className="w-3 h-3 bg-purple-600 rounded"></div>
                     <span className="text-sm text-gray-300">Photoshop</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 bg-gray-900 rounded">
@@ -682,13 +735,13 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-4 rounded-lg border border-gray-600">
+              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">
                   DevOps & Cloud
                 </h4>
                 <div className="grid grid-cols-2 gap-2">
                   <div className="flex items-center gap-2 p-2 bg-gray-900 rounded">
-                    <div className="w-3 h-3 bg-blue-400 rounded"></div>
+                    <div className="w-3 h-3 bg-purple-400 rounded"></div>
                     <span className="text-sm text-gray-300">Docker</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 bg-gray-900 rounded">
@@ -699,20 +752,16 @@ export default function AboutSection() {
                     <div className="w-3 h-3 bg-green-600 rounded"></div>
                     <span className="text-sm text-gray-300">Netlify</span>
                   </div>
-                  <div className="flex items-center gap-2 p-2 bg-gray-900 rounded">
-                    <div className="w-3 h-3 bg-orange-400 rounded"></div>
-                    <span className="text-sm text-gray-300">AWS</span>
-                  </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-4 rounded-lg border border-gray-600">
+              {/* <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">
                   Project Management
                 </h4>
                 <div className="grid grid-cols-2 gap-2">
                   <div className="flex items-center gap-2 p-2 bg-gray-900 rounded">
-                    <div className="w-3 h-3 bg-blue-500 rounded"></div>
+                    <div className="w-3 h-3 bg-purple-500 rounded"></div>
                     <span className="text-sm text-gray-300">Trello</span>
                   </div>
                   <div className="flex items-center gap-2 p-2 bg-gray-900 rounded">
@@ -728,7 +777,7 @@ export default function AboutSection() {
                     <span className="text-sm text-gray-300">Slack</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </article>
         </div>

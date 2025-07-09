@@ -3,6 +3,7 @@ import AchievementSection from "@/components/AchievementSection";
 import HomeSection from "@/components/HomeSection";
 import Navbar from "@/components/Navbar";
 import ProjectSection from "@/components/ProjectSection";
+import FooterSection from "@/components/FooterSection";
 export default function Home() {
   return (
 <>
@@ -11,6 +12,7 @@ export default function Home() {
   <AboutSection />
   <AchievementSection />
   <ProjectSection />
+  <FooterSection />
 </>
   );
 }
