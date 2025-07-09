@@ -234,7 +234,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       className="relative h-screen max-w-screen-2xl m-auto px-0 md:px-24 bg-[#0B0D14] text-white font-mono flex flex-col justify-center"
-      id="home"
+      id="abouts"
     >
       <header className="relative flex items-center justify-center pt-0 pb-8 px-4 sm:px-0 max-w-screen-lg mx-auto">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent blur-xl"></div>
@@ -376,13 +376,13 @@ export default function AboutSection() {
                       {/* <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                         
                       </div> */}
-                      <Image 
-                          src="/images/profile2.png"
-                          alt="Profile"
-                          width={80}
-                          height={80}
-                          className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center object-cover"
-                        />
+                      <Image
+                        src="/images/profile2.png"
+                        alt="Profile"
+                        width={80}
+                        height={80}
+                        className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center object-cover"
+                      />
                       <h1 className="text-white font-semibold text-lg mb-1">
                         Adza Zarif Nur Iskandar
                       </h1>
@@ -397,6 +397,23 @@ export default function AboutSection() {
                 </div>
 
                 <div className="lg:w-2/3">
+                  {/* Stats */}
+                  <div className="grid grid-cols-3 mb-8 gap-6">
+                    {[
+                      { number: "50+", label: "Projects" },
+                      { number: "3+", label: "Years" },
+                      { number: "100%", label: "Satisfied" },
+                    ].map((stat, index) => (
+                      <div key={index} className="text-center">
+                        <div className="text-2xl font-bold text-white">
+                          {stat.number}
+                        </div>
+                        <div className="text-sm text-white/60">
+                          {stat.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-cyan-400/20 rounded-full flex items-center justify-center">
@@ -601,7 +618,7 @@ export default function AboutSection() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">Backend</h4>
                 <div className="space-y-2">

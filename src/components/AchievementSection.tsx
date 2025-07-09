@@ -333,7 +333,7 @@ export default function AchievementSection() {
   );
 
   return (
-    <section className="relative min-h-screen w-full px-0 md:px-24 bg-[#0B0D14] py-20 text-white font-mono">
+    <section id="achievement" className="relative min-h-screen w-full sm:px-0 md:px-24 bg-[#0B0D14] py-20 text-white font-mono">
       <header className="relative flex items-center justify-center pt-0 pb-8 px-4 sm:px-0 max-w-screen-lg mx-auto">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent blur-xl"></div>
 
@@ -349,10 +349,10 @@ export default function AchievementSection() {
           <div className="absolute inset-0 bg-gradient-to-b from-cyan-400/5 to-transparent rounded-2xl"></div>
           <div className="relative z-10 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent mb-3">
-              About Me
+            My Achievements
             </h2>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Mengenal lebih dalam tentang pengalaman, keahlian, dan tools saya
+            Penghargaan yang saya miliki ketika mengikuti lomba lomba Nasional. dan beberapa Sertifikat yang saya miliki
             </p>
             <div className="flex justify-center space-x-2 mt-4">
               <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>

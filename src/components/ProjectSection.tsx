@@ -80,7 +80,7 @@ export default function HomeSection() {
   };
 
   return (
-    <section id="home" className="min-h-screen">
+    <section id="project" className="min-h-screen">
       <header className="relative flex items-center justify-center pt-0 pb-8 px-4 sm:px-0 max-w-screen-lg mx-auto">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent blur-xl"></div>
 

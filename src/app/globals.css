@@ -5,10 +5,15 @@
   --foreground: #fff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Fira Code", serif;
+ 
 }
 .color-primary{
   color: #0B0D14;
@@ -36,8 +41,8 @@ body {
 }
 
 .bg-gradient-biru {
-  background: radial-gradient(circle, rgb(6, 182, 212,1) 0%, rgba(6,182,212,0) 70%);
+  background: radial-gradient(circle, rgb(6, 182, 212,.4) 0%, rgba(6,182,212,0) 70%);
 }
 .bg-gradient-ungu {
-  background: radial-gradient(circle, rgba(168,85,247,1) 0%, rgba(168,85,247,0) 70%);
+  background: radial-gradient(circle, rgba(168,85,247,.7) 0%, rgba(168,85,247,0) 70%);
 }
