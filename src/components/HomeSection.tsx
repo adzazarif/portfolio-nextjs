@@ -1,5 +1,5 @@
 "use client";
-import { Instagram, Linkedin, Github, ArrowRight, Code, Palette, Zap } from "lucide-react";
+import { Linkedin, Github, ArrowRight, Code, Palette, Zap } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function HomeSection() {
@@ -68,7 +68,7 @@ export default function HomeSection() {
                   Adza Zarif Nur Iskandar
                 </h1>
                 
-                <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"></div>
+                <div className="w-24 h-1 bg-cyan-400 rounded-full"></div>
               </div>
 
               {/* Skills Pills */}
@@ -87,7 +87,7 @@ export default function HomeSection() {
               {/* Social Links */}
               <div className="flex gap-4">
                 {[
-                  { icon: Instagram, href: "https://www.instagram.com/adzazarifnur/", color: "hover:text-pink-400" },
+                  // { icon: Instagram, href: "https://www.instagram.com/adzazarifnur/", color: "hover:text-pink-400" },
                   { icon: Linkedin, href: "https://www.linkedin.com/in/adzazarif/", color: "hover:text-blue-400" },
                   { icon: Github, href: "https://github.com/Adzazarif", color: "hover:text-gray-300" }
                 ].map((social, index) => (
@@ -132,7 +132,7 @@ export default function HomeSection() {
               <div className="flex gap-4">
                 <a
                   href="#abouts"
-                  className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                  className="group inline-flex items-center gap-2 px-8 py-4 bg-cyan-500 text-white rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105"
                 >
                   <span>Lebih lengkap</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

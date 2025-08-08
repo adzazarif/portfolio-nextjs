@@ -289,7 +289,7 @@ export default function AboutSection() {
                 className={`rounded-xl px-6 py-3 border w-[150px] flex items-center justify-center transition-all duration-300
                 ${
                   activeSection === section.id
-                    ? "border-cyan-400 shadow-[0_0_15px_#00ffff] text-white bg-gradient-to-r from-cyan-500 to-purple-500"
+                    ? "border-cyan-400 shadow-[0_0_15px_#00ffff] text-white bg-cyan-500/90"
                     : "border-gray-400 text-white"
                 } bg-[#0d1117]`}
                 onClick={() => {
@@ -364,7 +364,7 @@ export default function AboutSection() {
                 <h3 className="text-2xl md:text-2xl font-bold text-white mb-1">
                   Tentang Saya
                 </h3>
-                <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
+                <div className="w-20 h-1 bg-cyan-500/90 rounded-full" />
               </div>
             </div>
 
@@ -373,9 +373,9 @@ export default function AboutSection() {
               {/* Profile Card */}
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="lg:w-1/3">
-                  <div className="bg-gradient-to-r from-cyan-400 to-purple-500 p-0.5 rounded-xl">
+                  <div className="bg-cyan-500/90 p-0.5 rounded-xl">
                     <div className="bg-gray-800 rounded-xl p-4 text-center">
-                      {/* <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      {/* <div className="w-20 h-20 bg-cyan-500/90 rounded-full mx-auto mb-4 flex items-center justify-center">
                         
                       </div> */}
                       <Image
@@ -383,7 +383,7 @@ export default function AboutSection() {
                         alt="Profile"
                         width={80}
                         height={80}
-                        className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center object-cover"
+                        className="w-20 h-20 bg-cyan-500/90 rounded-full mx-auto mb-4 flex items-center justify-center object-cover"
                       />
                       <h1 className="text-white font-semibold text-lg mb-1">
                         Adza Zarif Nur Iskandar
@@ -474,7 +474,7 @@ export default function AboutSection() {
                 <h3 className="text-2xl md:text-2xl font-bold text-white mb-0">
                   Pengalaman
                 </h3>
-                <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
+                <div className="w-20 h-1 bg-cyan-500/90 rounded-full" />
               </div>
             </div>
 
@@ -575,7 +575,7 @@ export default function AboutSection() {
                 <h3 className="text-2xl md:text-2xl font-bold text-white mb-0">
                   Skill
                 </h3>
-                <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
+                <div className="w-20 h-1 bg-cyan-500/90 rounded-full" />
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -702,7 +702,7 @@ export default function AboutSection() {
                 <h3 className="text-2xl md:text-2xl font-bold text-white mb-0">
                   Tools & Software
                 </h3>
-                <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full" />
+                <div className="w-20 h-1 bg-cyan-500/90 rounded-full" />
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

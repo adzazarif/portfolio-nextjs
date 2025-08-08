@@ -125,7 +125,7 @@ export default function Navbar() {
             <ul className="relative md:flex md:flex-row flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-4 md:mt-0 md:border-0 rtl:space-x-reverse">
               <div
                 ref={backgroundRef}
-                className="absolute z-[-1] bg-gradient-to-r from-cyan-500/30 to-purple-500/30 border border-cyan-300 rounded-2xl shadow-[0_0_10px_#00ffff] transition-all duration-300 ease-in-out hidden md:block"
+                className="absolute z-[-1] bg-cyan-500/90 border border-cyan-300 rounded-2xl shadow-[0_0_10px_#00ffff] transition-all duration-300 ease-in-out hidden md:block"
                 style={{ transform: "translateX(0px)", width: 0, height: 0 }}
               />
               {["home", "abouts", "achievement", "project", "contact"].map((id) => (

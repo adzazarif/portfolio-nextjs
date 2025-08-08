@@ -225,7 +225,7 @@ const HomeSection: React.FC = () => {
         disabled={!isValidLink(project.website)}
         className={`flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-200 group/btn ${
           isValidLink(project.website)
-            ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-400 hover:to-purple-400 shadow-lg hover:shadow-cyan-500/25 cursor-pointer'
+            ? 'bg-cyan-500 text-white hover:bg-cyan-400  shadow-lg hover:shadow-cyan-500/25 cursor-pointer'
             : 'bg-gray-800/20 border border-gray-700/30 text-gray-600 cursor-not-allowed opacity-50'
         }`}
         title={isValidLink(project.website) ? "Live Demo" : "Website tidak tersedia"}

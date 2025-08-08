@@ -21,6 +21,21 @@
     },
     {
       "id": 2,
+      "rank": "Juara 2",
+      "title": "Olivia X UB 2025",
+      "description": "Saya berpartisipasi di bidang Information Technology, khususnya tangkai lomba Web Technology, di mana kami ditantang untuk merancang dan membangun solusi berbasis web yang inovatif, efisien, serta mengintegrasikan teknologi GIS (Sistem Informasi Geografis) untuk membantu menyelesaikan permasalahan yang ada.",
+      "institution": "Universita Brawijaya",
+      "location": "Malang, Jawa Timur, Indonesia",
+      "date": "Juli 2024",
+      "color": "bg-purple-400/20 border-purple-400/40 text-purple-300",
+      "emoji": "🥈",
+      "images": [
+        "/images/image/lomba/ub.png",
+        "/images/image/lomba/ub2.png"
+      ]
+    },
+    {
+      "id": 3,
       "rank": "Juara 3",
       "title": "National Competition Play IT 2024",
       "description": "Saya berhasil meraih Juara 1 dalam kompetisi pengembangan teknologi selama 24 jam yang mencakup pembuatan Generative AI dan software untuk mendukung SDGs. Dalam proyek ini, saya mengembangkan model AI menggunakan Python, backend dengan Flask dan Laravel, serta frontend menggunakan Tailwind CSS, jQuery, dan Leaflet.",
@@ -38,7 +53,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "rank": "Finalis",
       "title": "Hackfest UC 2025",
       "description": "Saya menjadi finalis dalam Hackfest Universitas Ciputra 2025. Proyek saya mencakup pembuatan website menggunakan React, Tailwind CSS, dan jQuery, serta integrasi dengan Midtrans dan Laravel.",
@@ -51,20 +66,6 @@
         "/images/image/lomba/uc.png",
         "/images/image/lomba/uc2.png",
         "/images/image/sertifikat/uc.png"
-      ]
-    },
-    {
-      "id": 4,
-      "rank": "Cooming Soon",
-      "title": "Olivia X UB 2025",
-      "description": "-",
-      "institution": "Universita Brawijaya",
-      "location": "Malang, Jawa Timur, Indonesia",
-      "date": "Juli 2024",
-      "color": "bg-purple-400/20 border-purple-400/40 text-purple-300",
-      "emoji": "⏱️",
-      "images": [
-        
       ]
     },
     {
