@@ -485,7 +485,7 @@ export default function AboutSection() {
                 <div className="timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
                   <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
                   <div className="w-full md:w-1/2 text-center md:text-right md:pr-6">
-                    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                    <div className="bg-cyan-400/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
                       <h3 className="font-bold text-base md:text-lg text-cyan-300">
                         Front-End & Back-End Developer (Studi Independent)
                       </h3>
@@ -505,7 +505,7 @@ export default function AboutSection() {
                   <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
                   <div className="hidden md:block md:w-1/2"></div>
                   <div className="w-full md:w-1/2 text-center md:text-left md:pl-6">
-                    <div className="bg-gradient-to-l from-cyan-500/10 to-purple-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                    <div className="bg-cyan-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
                       <h3 className="font-bold text-base md:text-lg text-cyan-300">
                         Fullstack Web Developer
                       </h3>
@@ -523,7 +523,7 @@ export default function AboutSection() {
                 <div className="timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 mt-12">
                   <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
                   <div className="w-full md:w-1/2 text-center md:text-right md:pr-6">
-                    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                    <div className="bg-cyan-400/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
                       <h3 className="font-bold text-base md:text-lg text-cyan-300">
                         Front End Web Developer
                       </h3>
@@ -543,7 +543,7 @@ export default function AboutSection() {
                   <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
                   <div className="hidden md:block md:w-1/2"></div>
                   <div className="w-full md:w-1/2 text-center md:text-left md:pl-6">
-                    <div className="bg-gradient-to-l from-cyan-500/10 to-purple-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                    <div className="bg-cyan-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
                       <h3 className="font-bold text-base md:text-lg text-cyan-300">
                         Front End Web Developer
                       </h3>
@@ -579,7 +579,7 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
+              <div className="bg-cyan-400/10 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">Frontend</h4>
                 <div className="space-y-2">
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
@@ -621,7 +621,7 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
+              <div className="bg-cyan-400/10 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">Backend</h4>
                 <div className="space-y-2">
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
@@ -662,7 +662,7 @@ export default function AboutSection() {
                   </div>
                 </div>
               </div>
-              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
+              <div className="bg-cyan-400/10 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">Database</h4>
                 <div className="space-y-2">
                   <div className="flex items-center gap-3 p-2 bg-gray-900 rounded hover:bg-gray-800 transition-colors">
@@ -706,7 +706,7 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
+              <div className="bg-cyan-400/10 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">
                   Development Tools
                 </h4>
@@ -730,7 +730,7 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
+              <div className="bg-cyan-400/10 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">
                   Design Tools
                 </h4>
@@ -754,7 +754,7 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
+              <div className="bg-cyan-400/10 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">
                   DevOps & Cloud
                 </h4>
@@ -774,7 +774,7 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              {/* <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-gray-600">
+              {/* <div className="bg-cyan-400/10 p-4 rounded-lg border border-gray-600">
                 <h4 className="font-semibold text-cyan-400 mb-3">
                   Project Management
                 </h4>

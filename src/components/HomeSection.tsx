@@ -1,5 +1,5 @@
 "use client";
-import { Linkedin, Github, ArrowRight, Code, Palette, Zap } from "lucide-react";
+import { Linkedin, Github, ArrowRight, Instagram, Code, Palette, Zap } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function HomeSection() {
@@ -87,7 +87,7 @@ export default function HomeSection() {
               {/* Social Links */}
               <div className="flex gap-4">
                 {[
-                  // { icon: Instagram, href: "https://www.instagram.com/adzazarifnur/", color: "hover:text-pink-400" },
+                  { icon: Instagram, href: "https://www.instagram.com/adzazarifnur/", color: "hover:text-pink-400" },
                   { icon: Linkedin, href: "https://www.linkedin.com/in/adzazarif/", color: "hover:text-blue-400" },
                   { icon: Github, href: "https://github.com/Adzazarif", color: "hover:text-gray-300" }
                 ].map((social, index) => (
