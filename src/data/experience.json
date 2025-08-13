@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Front End Web Developer",
+        "company": "Akasha Shatya Wibawa",
+        "date": "2021",
+        "description": "Membuat website portfolio perusahaan Akasha Shatya Wibawa"
+    },
+    {
+        "id": 2,
+        "title": "Front End Web Developer",
+        "company": "Kilau Sri Purnama",
+        "date": "2022",
+        "description": "Membuat website portfolio yang bergerak di bidang transportasi perusahaan Kilau Sri Purnama"
+    },
+    {
+        "id": 3,
+        "title": "Fullstack Web Developer",
+        "company": "Thalassa Blue",
+        "date": "2024 - 2025",
+        "description": "Membuat aplikasi pemesanan boat dan trip untuk perusahaan Thalassa Blue"
+    },
+    {
+        "id": 4,
+        "title": "Front-End & Back-End Developer (Studi Independent)",
+        "company": "Coding Camp By DBS Foundation",
+        "date": "Feb 2025 - Juli 2025",
+        "description": "Mengembangkan bisnis jasa software development bersama tim berpengalaman"
+    },
+    {
+        "id": 5,
+        "title": "Front End Web Developer",
+        "company": "PT. Meetaza Prawira Media",
+        "date": "Agustus 2025 - present",
+        "description": "Implementasi API dan pengembangan antarmuka pengguna untuk aplikasi web perusahaan PT. Meetaza Prawira Media"
+    }
+]

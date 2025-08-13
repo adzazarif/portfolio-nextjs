@@ -5,6 +5,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Linkedin, Phone, Map } from "lucide-react";
 import Image from "next/image";
+import experienceData from "@/data/experience.json";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSection() {
@@ -482,81 +483,47 @@ export default function AboutSection() {
               <div className="relative w-full max-w-4xl">
                 <div className="timeline-line absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-cyan-400 to-purple-500 origin-top"></div>
 
-                <div className="timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-                  <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
-                  <div className="w-full md:w-1/2 text-center md:text-right md:pr-6">
-                    <div className="bg-cyan-400/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
-                      <h3 className="font-bold text-base md:text-lg text-cyan-300">
-                        Front-End & Back-End Developer (Studi Independent)
-                      </h3>
-                      <p className="text-xs md:text-sm text-gray-400 mb-2">
-                        Coding Camp By DBS Foundation (Feb 2025 - Now)
-                      </p>
-                      <p className="text-xs md:text-sm text-gray-300">
-                        Mengembangkan bisnis jasa software development bersama
-                        tim berpengalaman
-                      </p>
-                    </div>
+                {experienceData.slice().reverse().map((experience, index) => (
+                  <div key={experience.id} className={`timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 ${index > 0 ? 'mt-12' : ''}`}>
+                    <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
+                    
+                    {index % 2 === 0 ? (
+                      <>
+                        <div className="w-full md:w-1/2 text-center md:text-right md:pr-6">
+                          <div className="bg-cyan-400/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                            <h3 className="font-bold text-base md:text-lg text-cyan-300">
+                              {experience.title}
+                            </h3>
+                            <p className="text-xs md:text-sm text-gray-400 mb-2">
+                              {experience.company} ({experience.date})
+                            </p>
+                            <p className="text-xs md:text-sm text-gray-300">
+                              {experience.description}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="hidden md:block md:w-1/2"></div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="hidden md:block md:w-1/2"></div>
+                        <div className="w-full md:w-1/2 text-center md:text-left md:pl-6">
+                          <div className="bg-cyan-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                            <h3 className="font-bold text-base md:text-lg text-cyan-300">
+                              {experience.title}
+                            </h3>
+                            <p className="text-xs md:text-sm text-gray-400 mb-2">
+                              {experience.company} ({experience.date})
+                            </p>
+                            <p className="text-xs md:text-sm text-gray-300">
+                              {experience.description}
+                            </p>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
-                  <div className="hidden md:block md:w-1/2"></div>
-                </div>
-
-                <div className="timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 mt-12">
-                  <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
-                  <div className="hidden md:block md:w-1/2"></div>
-                  <div className="w-full md:w-1/2 text-center md:text-left md:pl-6">
-                    <div className="bg-cyan-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
-                      <h3 className="font-bold text-base md:text-lg text-cyan-300">
-                        Fullstack Web Developer
-                      </h3>
-                      <p className="text-xs md:text-sm text-gray-400 mb-2">
-                        Thalassa Blue (2024 - 2025)
-                      </p>
-                      <p className="text-xs md:text-sm text-gray-300">
-                        Membuat aplilasi pemesanan boat dan trip untuk
-                        perusahaan Thalassa purple
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 mt-12">
-                  <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
-                  <div className="w-full md:w-1/2 text-center md:text-right md:pr-6">
-                    <div className="bg-cyan-400/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
-                      <h3 className="font-bold text-base md:text-lg text-cyan-300">
-                        Front End Web Developer
-                      </h3>
-                      <p className="text-xs md:text-sm text-gray-400 mb-2">
-                        Kilau Sri Purnama (2022)
-                      </p>
-                      <p className="text-xs md:text-sm text-gray-300">
-                        Membuat website portfolio yang bergerak di bidang
-                        transportasi perusahaan Kilau Sri Purnama
-                      </p>
-                    </div>
-                  </div>
-                  <div className="hidden md:block md:w-1/2"></div>
-                </div>
-
-                <div className="timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 mt-12">
-                  <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
-                  <div className="hidden md:block md:w-1/2"></div>
-                  <div className="w-full md:w-1/2 text-center md:text-left md:pl-6">
-                    <div className="bg-cyan-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
-                      <h3 className="font-bold text-base md:text-lg text-cyan-300">
-                        Front End Web Developer
-                      </h3>
-                      <p className="text-xs md:text-sm text-gray-400 mb-2">
-                        Akasha Shatya Wibawa (2021)
-                      </p>
-                      <p className="text-xs md:text-sm text-gray-300">
-                        Membuat website portfolio perusahaan Akasha Shatya
-                        Wibawa
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </article>
