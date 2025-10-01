@@ -1,47 +1,57 @@
 "use client";
-import { Linkedin, Github, ArrowRight, Instagram, Code, Palette, Zap } from "lucide-react";
+import {
+  Linkedin,
+  Github,
+  ArrowRight,
+  Instagram,
+  Code,
+  Palette,
+  Zap,
+} from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function HomeSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  
+
   useEffect(() => {
     setIsVisible(true);
-    
+
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   const skills = [
     { icon: Code, text: "Fullstack Developer" },
     { icon: Zap, text: "IoT Developer" },
-    { icon: Palette, text: "UI/UX Designer" }
+    { icon: Palette, text: "UI/UX Designer" },
   ];
 
   return (
-    <section id="home" className="relative min-h-screen pt-24 md:pt-0 overflow-hidden">
-      
+    <section
+      id="home"
+      className="relative min-h-screen pt-24 md:pt-0 overflow-hidden"
+    >
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div 
+        <div
           className="absolute w-96 h-96 rounded-full opacity-20 bg-gradient-to-r from-cyan-500 to-purple-600 blur-3xl"
           style={{
-            left: mousePosition.x * 0.02 + '%',
-            top: mousePosition.y * 0.02 + '%',
-            transform: 'translate(-50%, -50%)'
+            left: mousePosition.x * 0.02 + "%",
+            top: mousePosition.y * 0.02 + "%",
+            transform: "translate(-50%, -50%)",
           }}
         ></div>
-        <div 
+        <div
           className="absolute w-80 h-80 rounded-full opacity-15 bg-gradient-to-r from-purple-500 to-pink-500 blur-2xl  delay-1000"
           style={{
-            right: (100 - mousePosition.x * 0.015) + '%',
-            bottom: (100 - mousePosition.y * 0.015) + '%',
-            transform: 'translate(50%, 50%)'
+            right: 100 - mousePosition.x * 0.015 + "%",
+            bottom: 100 - mousePosition.y * 0.015 + "%",
+            transform: "translate(50%, 50%)",
           }}
         ></div>
       </div>
@@ -50,15 +60,20 @@ export default function HomeSection() {
       <div className="relative z-10 flex items-center justify-center min-h-screen">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            
             {/* Left Section */}
-            <div className={`space-y-8 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+            <div
+              className={`space-y-8 ${
+                isVisible ? "animate-fade-in-up" : "opacity-0"
+              }`}
+            >
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm text-white/80">Available for work</span>
+                  <span className="text-sm text-white/80">
+                    Available for work
+                  </span>
                 </div>
-                
+
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                   {/* <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
                     Adza Zarif
@@ -67,7 +82,7 @@ export default function HomeSection() {
                   <span className="text-white/90">Nur Iskandar</span> */}
                   Adza Zarif Nur Iskandar
                 </h1>
-                
+
                 <div className="w-24 h-1 bg-cyan-400 rounded-full"></div>
               </div>
 
@@ -87,9 +102,21 @@ export default function HomeSection() {
               {/* Social Links */}
               <div className="flex gap-4">
                 {[
-                  { icon: Instagram, href: "https://www.instagram.com/adzazarifnur/", color: "hover:text-pink-400" },
-                  { icon: Linkedin, href: "https://www.linkedin.com/in/adzazarif/", color: "hover:text-blue-400" },
-                  { icon: Github, href: "https://github.com/Adzazarif", color: "hover:text-gray-300" }
+                  {
+                    icon: Instagram,
+                    href: "https://www.instagram.com/adzazarifnur/",
+                    color: "hover:text-pink-400",
+                  },
+                  {
+                    icon: Linkedin,
+                    href: "https://www.linkedin.com/in/adzazarif/",
+                    color: "hover:text-blue-400",
+                  },
+                  {
+                    icon: Github,
+                    href: "https://github.com/Adzazarif",
+                    color: "hover:text-gray-300",
+                  },
                 ].map((social, index) => (
                   <a
                     key={index}
@@ -106,38 +133,41 @@ export default function HomeSection() {
             </div>
 
             {/* Right Section */}
-            <div className={`space-y-8 ${isVisible ? 'animate-fade-in-up delay-200' : 'opacity-0'}`}>
+            <div
+              className={`space-y-8 ${
+                isVisible ? "animate-fade-in-up delay-200" : "opacity-0"
+              }`}
+            >
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 text-purple-400 text-sm font-medium">
                   <div className="w-8 h-px bg-purple-400"></div>
                   <span>Introduction</span>
                 </div>
-                
+
                 <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-                  Creating digital experiences that{' '}
+                  Creating digital experiences that{" "}
                   <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                     inspire and innovate
                   </span>
                 </h2>
-                
+
                 <p className="text-lg text-white/70 leading-relaxed">
-                  Mampu membuat aplikasi untuk kebutuhan dan fungsionalitas pengguna 
-                  untuk meningkatkan produktivitas dengan teknologi terdepan dan desain yang menarik.
+                  Mampu membuat aplikasi untuk kebutuhan dan fungsionalitas
+                  pengguna untuk meningkatkan produktivitas dengan teknologi
+                  terdepan dan desain yang menarik.
                 </p>
               </div>
-
-          
 
               {/* CTA Button */}
               <div className="flex gap-4">
                 <a
                   href="#abouts"
-                  className="group inline-flex items-center gap-2 px-8 py-4 bg-cyan-500 text-white rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                  className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-400/20 to-cyan-600/20 text-white rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105"
                 >
                   <span>Lebih lengkap</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
-                
+
                 <a
                   href="#contact"
                   className="inline-flex items-center gap-2 px-8 py-4 border border-white/20 text-white rounded-full font-medium transition-all duration-300 hover:bg-white/10 hover:scale-105"
@@ -168,11 +198,11 @@ export default function HomeSection() {
             transform: translateY(0);
           }
         }
-        
+
         .animate-fade-in-up {
           animation: fade-in-up 0.8s ease-out forwards;
         }
-        
+
         .delay-200 {
           animation-delay: 0.2s;
         }

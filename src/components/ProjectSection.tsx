@@ -46,18 +46,24 @@ const HomeSection: React.FC = () => {
     return Boolean(link && link !== "-" && link.trim() !== "");
   };
 
-  const projectMatchesFilter = (project: Project, filterId: string): boolean => {
+  const projectMatchesFilter = (
+    project: Project,
+    filterId: string
+  ): boolean => {
     if (filterId === "all") return true;
-    
+
     if (Array.isArray(project.type)) {
-      return project.type.some(type => type.toLowerCase() === filterId.toLowerCase());
+      return project.type.some(
+        (type) => type.toLowerCase() === filterId.toLowerCase()
+      );
     }
-    
+
     return project.type.toLowerCase() === filterId.toLowerCase();
   };
 
   const getProjectCount = (filterId: string): number => {
-    return projects.filter(project => projectMatchesFilter(project, filterId)).length;
+    return projects.filter((project) => projectMatchesFilter(project, filterId))
+      .length;
   };
 
   const getTypeColor = (type: string): string => {
@@ -74,25 +80,29 @@ const HomeSection: React.FC = () => {
   // Data processing
   const filterCategories: FilterCategory[] = [
     { id: "all", label: "All Projects", count: projects.length },
-    { id: "fullstack", label: "Full Stack", count: getProjectCount("fullstack") },
+    {
+      id: "fullstack",
+      label: "Full Stack",
+      count: getProjectCount("fullstack"),
+    },
     { id: "frontend", label: "Frontend", count: getProjectCount("frontend") },
     { id: "backend", label: "Backend", count: getProjectCount("backend") },
     { id: "iot", label: "IoT", count: getProjectCount("iot") },
     { id: "desktop", label: "Desktop", count: getProjectCount("desktop") },
-  ].filter(category => category.count > 0);
+  ].filter((category) => category.count > 0);
 
-  const filteredProjects = projects.filter(project => 
+  const filteredProjects = projects.filter((project) =>
     projectMatchesFilter(project, activeFilter)
   );
 
   // Effects
   useEffect(() => {
     if (!containerRef.current) return;
-    
+
     const activeBtn = containerRef.current.querySelector(
       `[data-filter="${activeFilter}"]`
     ) as HTMLElement;
-    
+
     if (activeBtn) {
       const { offsetLeft, offsetTop, offsetWidth, offsetHeight } = activeBtn;
       setIndicatorStyle({
@@ -107,13 +117,13 @@ const HomeSection: React.FC = () => {
   // Render functions
   const renderTypeBadges = (types: string | string[]) => {
     const typeArray = Array.isArray(types) ? types : [types];
-    
+
     return typeArray.map((type, index) => (
       <span
         key={index}
         className={`inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-gradient-to-r ${getTypeColor(
           type
-        )} text-white shadow-lg ${index > 0 ? 'ml-2' : ''}`}
+        )} text-white shadow-lg ${index > 0 ? "ml-2" : ""}`}
       >
         {type.toUpperCase()}
       </span>
@@ -171,7 +181,7 @@ const HomeSection: React.FC = () => {
             className="relative flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-1"
           >
             <div
-              className="absolute z-0 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-500 shadow-lg shadow-cyan-500/25 transition-all duration-300"
+              className="absolute z-0 rounded-xl bg-gradient-to-r from-cyan-400/20 to-cyan-600/20 border border-cyan-400/30 shadow-lg shadow-cyan-500/25 transition-all duration-300"
               style={indicatorStyle}
             ></div>
             {filterCategories.map((category) => (
@@ -182,7 +192,7 @@ const HomeSection: React.FC = () => {
                 className={`relative z-10 px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm rounded-xl font-medium transition-all duration-300 ${
                   activeFilter === category.id
                     ? "text-white"
-                    : "text-gray-400 hover:text-white"
+                    : "shadow-cyan-400/25 text-cyan-300 hover:text-white"
                 }`}
               >
                 <span>{category.label}</span>
@@ -207,28 +217,38 @@ const HomeSection: React.FC = () => {
     <div className="flex justify-end space-x-3 mt-auto">
       {/* GitHub Button */}
       <button
-        onClick={() => isValidLink(project.github) && window.open(project.github, '_blank')}
+        onClick={() =>
+          isValidLink(project.github) && window.open(project.github, "_blank")
+        }
         disabled={!isValidLink(project.github)}
         className={`flex items-center justify-center w-10 h-10 border rounded-lg transition-all duration-200 group/btn ${
           isValidLink(project.github)
-            ? 'bg-gray-800/50 border-gray-700 text-gray-300 hover:border-cyan-400/50 hover:text-cyan-400 hover:bg-cyan-400/10 cursor-pointer'
-            : 'bg-gray-800/20 border-gray-700/30 text-gray-600 cursor-not-allowed opacity-50'
+            ? "bg-gray-800/50 border-gray-700 text-gray-300 hover:border-cyan-400/50 hover:text-cyan-400 hover:bg-cyan-400/10 cursor-pointer"
+            : "bg-gray-800/20 border-gray-700/30 text-gray-600 cursor-not-allowed opacity-50"
         }`}
-        title={isValidLink(project.github) ? "View on GitHub" : "GitHub tidak tersedia"}
+        title={
+          isValidLink(project.github)
+            ? "View on GitHub"
+            : "GitHub tidak tersedia"
+        }
       >
         <Github className="w-5 h-5" />
       </button>
 
       {/* Website Button */}
       <button
-        onClick={() => isValidLink(project.website) && window.open(project.website, '_blank')}
+        onClick={() =>
+          isValidLink(project.website) && window.open(project.website, "_blank")
+        }
         disabled={!isValidLink(project.website)}
         className={`flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-200 group/btn ${
           isValidLink(project.website)
-            ? 'bg-cyan-500 text-white hover:bg-cyan-400  shadow-lg hover:shadow-cyan-500/25 cursor-pointer'
-            : 'bg-gray-800/20 border border-gray-700/30 text-gray-600 cursor-not-allowed opacity-50'
+            ? "bg-cyan-500 text-white hover:bg-cyan-400  shadow-lg hover:shadow-cyan-500/25 cursor-pointer"
+            : "bg-gray-800/20 border border-gray-700/30 text-gray-600 cursor-not-allowed opacity-50"
         }`}
-        title={isValidLink(project.website) ? "Live Demo" : "Website tidak tersedia"}
+        title={
+          isValidLink(project.website) ? "Live Demo" : "Website tidak tersedia"
+        }
       >
         <ExternalLink className="w-5 h-5" />
       </button>
@@ -246,31 +266,30 @@ const HomeSection: React.FC = () => {
       {/* Glow effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
- 
-{/* Project image */}
-<div className="relative aspect-[16/10] bg-gray-900 overflow-hidden rounded-t-2xl group">
-  <Image
-    src={project.image}
-    alt={project.title}
-    fill
-    className="object-cover transition-transform duration-500 group-hover:scale-105 rounded-t-2xl"
-    sizes="(max-width: 1024px) 100vw, 800px"
-    priority={index === 0} // opsional: berikan prioritas LCP pada gambar pertama
-  />
+      {/* Project image */}
+      <div className="relative aspect-[16/10] bg-gray-900 overflow-hidden rounded-t-2xl group">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105 rounded-t-2xl"
+          sizes="(max-width: 1024px) 100vw, 800px"
+          priority={index === 0} // opsional: berikan prioritas LCP pada gambar pertama
+        />
 
-  {/* Type badges */}
-  <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2">
-    {renderTypeBadges(project.type)}
-  </div>
+        {/* Type badges */}
+        <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2">
+          {renderTypeBadges(project.type)}
+        </div>
 
-  {/* Date badge */}
-  <div className="absolute top-4 right-4 z-20">
-    <div className="flex items-center space-x-1 bg-black/50 backdrop-blur-sm rounded-full px-4 py-2">
-      <Calendar className="w-3 h-3 text-cyan-400" />
-      <span className="text-xs text-gray-300">{project.date}</span>
-    </div>
-  </div>
-</div>
+        {/* Date badge */}
+        <div className="absolute top-4 right-4 z-20">
+          <div className="flex items-center space-x-1 bg-black/50 backdrop-blur-sm rounded-full px-4 py-2">
+            <Calendar className="w-3 h-3 text-cyan-400" />
+            <span className="text-xs text-gray-300">{project.date}</span>
+          </div>
+        </div>
+      </div>
 
       {/* Card content */}
       <div className="relative p-8 flex flex-col flex-grow">
@@ -291,7 +310,9 @@ const HomeSection: React.FC = () => {
             {project.tech.map((tech, techIndex) => (
               <span
                 key={techIndex}
-                className={`px-4 py-2 border rounded-xl text-sm hover:scale-105 hover:shadow-xl transition-all duration-300 backdrop-blur-sm ${getTechColor(tech)}`}
+                className={`px-4 py-2 border rounded-xl text-sm hover:scale-105 hover:shadow-xl transition-all duration-300 backdrop-blur-sm ${getTechColor(
+                  tech
+                )}`}
               >
                 {tech}
               </span>
@@ -313,11 +334,13 @@ const HomeSection: React.FC = () => {
     <section id="project" className="min-h-screen">
       {renderHeader()}
       {renderFilterTabs()}
-      
+
       {/* Portfolio cards */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {filteredProjects.map((project, index) => renderProjectCard(project, index))}
+          {filteredProjects.map((project, index) =>
+            renderProjectCard(project, index)
+          )}
         </div>
       </div>
 

@@ -49,8 +49,11 @@ type TabType = "perlombaan" | "sertifikat";
 export default function AchievementSection() {
   const [activeTab, setActiveTab] = useState<TabType>("perlombaan");
   const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
-  const [currentImageIndex, setCurrentImageIndex] = useState<Record<string | number, number>>({});
-  const [showAllCompetitions, setShowAllCompetitions] = useState<boolean>(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState<
+    Record<string | number, number>
+  >({});
+  const [showAllCompetitions, setShowAllCompetitions] =
+    useState<boolean>(false);
   const [isClient, setIsClient] = useState<boolean>(false);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -126,15 +129,22 @@ export default function AchievementSection() {
   const achievementData: Achievement[] = data.achievements;
   const certificateData: Certificate[] = data.certificates;
 
-  const displayedData = activeTab === "perlombaan"
-    ? (showAllCompetitions ? achievementData : achievementData.slice(0, 4))
-    : certificateData;
+  const displayedData =
+    activeTab === "perlombaan"
+      ? showAllCompetitions
+        ? achievementData
+        : achievementData.slice(0, 4)
+      : certificateData;
 
   const renderNoImagePlaceholder = (emoji?: string) => (
     <div className="relative">
       <div className="relative overflow-hidden rounded-2xl group-hover:scale-105 transition-transform duration-500">
-        <div className={`w-full h-48 lg:h-56 bg-gradient-to-br ${colors.iconBg} flex flex-col items-center justify-center rounded-2xl`}>
-          {emoji && <div className={`${colors.iconColor} text-6xl mb-2`}>{emoji}</div>}
+        <div
+          className={`w-full h-48 lg:h-56 bg-gradient-to-br ${colors.iconBg} flex flex-col items-center justify-center rounded-2xl`}
+        >
+          {emoji && (
+            <div className={`${colors.iconColor} text-6xl mb-2`}>{emoji}</div>
+          )}
           <div className="text-gray-500 text-sm text-center px-4">
             Belum ada foto
           </div>
@@ -272,7 +282,11 @@ export default function AchievementSection() {
         cardRefs.current[index] = el;
       }}
       data-card-index={index}
-      className={`group relative bg-gradient-to-br ${colors.bg} backdrop-blur-sm border ${colors.border} rounded-2xl p-6 transition-all duration-700 ${colors.shadow} ${
+      className={`group relative bg-gradient-to-br ${
+        colors.bg
+      } backdrop-blur-sm border ${
+        colors.border
+      } rounded-2xl p-6 transition-all duration-700 ${colors.shadow} ${
         isClient && visibleCards.has(index)
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-8 scale-95"
@@ -304,7 +318,9 @@ export default function AchievementSection() {
         {/* Content Section */}
         <div className="space-y-4">
           {/* Title */}
-          <h4 className={`text-xl font-bold text-white ${colors.titleHover} transition-colors duration-300`}>
+          <h4
+            className={`text-xl font-bold text-white ${colors.titleHover} transition-colors duration-300`}
+          >
             {item.title}
           </h4>
 
@@ -330,7 +346,11 @@ export default function AchievementSection() {
         cardRefs.current[index] = el;
       }}
       data-card-index={index}
-      className={`group relative bg-gradient-to-br ${colors.bg} backdrop-blur-sm border ${colors.border} rounded-2xl p-6 transition-all duration-700 ${colors.shadow} ${
+      className={`group relative bg-gradient-to-br ${
+        colors.bg
+      } backdrop-blur-sm border ${
+        colors.border
+      } rounded-2xl p-6 transition-all duration-700 ${colors.shadow} ${
         isClient && visibleCards.has(index)
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-8 scale-95"
@@ -352,14 +372,18 @@ export default function AchievementSection() {
         <div className="flex-1 lg:pl-4">
           {/* Rank Badge */}
           <div className="mb-4">
-            <div className={`inline-flex items-center px-4 py-2 ${item.color} rounded-full text-sm font-medium backdrop-blur-sm`}>
+            <div
+              className={`inline-flex items-center px-4 py-2 ${item.color} rounded-full text-sm font-medium backdrop-blur-sm`}
+            >
               <span className="mr-2 text-lg">{item.emoji}</span>
               {item.rank}
             </div>
           </div>
 
           {/* Title */}
-          <h4 className={`text-2xl lg:text-3xl font-bold text-white mb-2 ${colors.titleHover} transition-colors duration-300`}>
+          <h4
+            className={`text-2xl lg:text-3xl font-bold text-white mb-2 ${colors.titleHover} transition-colors duration-300`}
+          >
             {item.title}
           </h4>
 
@@ -426,7 +450,8 @@ export default function AchievementSection() {
               My Achievements
             </h2>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Penghargaan yang saya miliki ketika mengikuti lomba lomba Nasional. dan beberapa Sertifikat yang saya miliki
+              Penghargaan yang saya miliki ketika mengikuti lomba lomba
+              Nasional. dan beberapa Sertifikat yang saya miliki
             </p>
             <div className="flex justify-center space-x-2 mt-4">
               <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
@@ -450,7 +475,9 @@ export default function AchievementSection() {
           {/* Sliding background indicator */}
           <div
             className={`absolute top-2 bottom-2 bg-gradient-to-r from-cyan-400/20 to-cyan-600/20 rounded-xl border border-cyan-400/30 transition-all duration-500 ease-in-out ${
-              activeTab === "perlombaan" ? "left-2 right-[150px]" : "left-[150px] right-2"
+              activeTab === "perlombaan"
+                ? "left-2 right-[150px]"
+                : "left-[150px] right-2"
             }`}
           />
 

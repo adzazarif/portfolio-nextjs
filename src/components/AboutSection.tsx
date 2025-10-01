@@ -20,8 +20,6 @@ export default function AboutSection() {
     { id: "tools", label: "Tools" },
   ];
 
-  
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setActiveSection("tentang");
@@ -290,7 +288,7 @@ export default function AboutSection() {
                 className={`rounded-xl px-6 py-3 border w-[150px] flex items-center justify-center transition-all duration-300
                 ${
                   activeSection === section.id
-                    ? "border-cyan-400 shadow-[0_0_15px_#00ffff] text-white bg-cyan-500/90"
+                    ? "border-cyan-400/25 shadow-[0_0_25px_rgba(6,182,212,0.4)] text-white bg-gradient-to-r from-cyan-400/20 to-cyan-600/20"
                     : "border-gray-400 text-white"
                 } bg-[#0d1117]`}
                 onClick={() => {
@@ -323,7 +321,7 @@ export default function AboutSection() {
                 className={`w-3 h-3 rounded-full border-2 transition-all duration-300 relative group
                 ${
                   activeSection === section.id
-                    ? "bg-cyan-400 border-cyan-400 shadow-[0_0_8px_#00ffff]"
+                    ? "bg-cyan-400/25 border-cyan-300/25 shadow-[0_0_8px_#00ffff]"
                     : "bg-transparent border-gray-400"
                 }`}
                 onClick={() => {
@@ -349,7 +347,7 @@ export default function AboutSection() {
             id="tentang"
             className={`scroll-snap-start relative overflow-hidden rounded-2xl p-6 md:p-8 scroll-mt-20 transition-all duration-500 ${
               activeSection === "tentang"
-                ? "border-2 border-cyan-400 shadow-[0_0_25px_rgba(6,182,212,0.4)]"
+                ? "border-2 border-cyan-400/25 shadow-[0_0_25px_rgba(6,182,212,0.4)]"
                 : "border border-gray-600 shadow-xl bg-gradient-to-br from-gray-900/90 to-gray-800/90 hover:border-gray-500"
             } backdrop-blur-sm`}
           >
@@ -465,7 +463,7 @@ export default function AboutSection() {
             id="pengalaman"
             className={`scroll-snap-start border rounded-lg p-4 md:p-6 scroll-mt-20 transition-all duration-300 ${
               activeSection === "pengalaman"
-                ? "border-cyan-400 shadow-[0_0_15px_#00ffff]"
+                ? "border-cyan-400/25 shadow-[0_0_25px_rgba(6,182,212,0.4)]"
                 : "border-gray-500 shadow-lg"
             }`}
           >
@@ -483,47 +481,55 @@ export default function AboutSection() {
               <div className="relative w-full max-w-4xl">
                 <div className="timeline-line absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-cyan-400 to-purple-500 origin-top"></div>
 
-                {experienceData.slice().reverse().map((experience, index) => (
-                  <div key={experience.id} className={`timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 ${index > 0 ? 'mt-12' : ''}`}>
-                    <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
-                    
-                    {index % 2 === 0 ? (
-                      <>
-                        <div className="w-full md:w-1/2 text-center md:text-right md:pr-6">
-                          <div className="bg-cyan-400/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
-                            <h3 className="font-bold text-base md:text-lg text-cyan-300">
-                              {experience.title}
-                            </h3>
-                            <p className="text-xs md:text-sm text-gray-400 mb-2">
-                              {experience.company} ({experience.date})
-                            </p>
-                            <p className="text-xs md:text-sm text-gray-300">
-                              {experience.description}
-                            </p>
+                {experienceData
+                  .slice()
+                  .reverse()
+                  .map((experience, index) => (
+                    <div
+                      key={experience.id}
+                      className={`timeline-item relative flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 ${
+                        index > 0 ? "mt-12" : ""
+                      }`}
+                    >
+                      <div className="timeline-dot absolute left-1/2 transform -translate-x-1/2 bg-white h-4 w-4 rounded-full border-4 border-gray-900 z-10"></div>
+
+                      {index % 2 === 0 ? (
+                        <>
+                          <div className="w-full md:w-1/2 text-center md:text-right md:pr-6">
+                            <div className="bg-cyan-400/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                              <h3 className="font-bold text-base md:text-lg text-cyan-300">
+                                {experience.title}
+                              </h3>
+                              <p className="text-xs md:text-sm text-gray-400 mb-2">
+                                {experience.company} ({experience.date})
+                              </p>
+                              <p className="text-xs md:text-sm text-gray-300">
+                                {experience.description}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                        <div className="hidden md:block md:w-1/2"></div>
-                      </>
-                    ) : (
-                      <>
-                        <div className="hidden md:block md:w-1/2"></div>
-                        <div className="w-full md:w-1/2 text-center md:text-left md:pl-6">
-                          <div className="bg-cyan-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
-                            <h3 className="font-bold text-base md:text-lg text-cyan-300">
-                              {experience.title}
-                            </h3>
-                            <p className="text-xs md:text-sm text-gray-400 mb-2">
-                              {experience.company} ({experience.date})
-                            </p>
-                            <p className="text-xs md:text-sm text-gray-300">
-                              {experience.description}
-                            </p>
+                          <div className="hidden md:block md:w-1/2"></div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="hidden md:block md:w-1/2"></div>
+                          <div className="w-full md:w-1/2 text-center md:text-left md:pl-6">
+                            <div className="bg-cyan-500/10 p-3 md:p-4 rounded-lg border border-cyan-400/20 backdrop-blur-sm">
+                              <h3 className="font-bold text-base md:text-lg text-cyan-300">
+                                {experience.title}
+                              </h3>
+                              <p className="text-xs md:text-sm text-gray-400 mb-2">
+                                {experience.company} ({experience.date})
+                              </p>
+                              <p className="text-xs md:text-sm text-gray-300">
+                                {experience.description}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      </>
-                    )}
-                  </div>
-                ))}
+                        </>
+                      )}
+                    </div>
+                  ))}
               </div>
             </div>
           </article>
@@ -532,7 +538,7 @@ export default function AboutSection() {
             id="skill"
             className={`scroll-snap-start border rounded-lg p-6 scroll-mt-20 transition-all duration-300 ${
               activeSection === "skill"
-                ? "border-cyan-400 shadow-[0_0_15px_#00ffff]"
+                ? "border-cyan-400/25 shadow-[0_0_25px_rgba(6,182,212,0.4)]"
                 : "border-gray-500 shadow-lg"
             }`}
           >
@@ -659,7 +665,7 @@ export default function AboutSection() {
             id="tools"
             className={`scroll-snap-start border rounded-lg p-6 scroll-mt-20 transition-all duration-300 ${
               activeSection === "tools"
-                ? "border-cyan-400 shadow-[0_0_15px_#00ffff]"
+                ? "border-cyan-400/25 shadow-[0_0_25px_rgba(6,182,212,0.4)]"
                 : "border-gray-500 shadow-lg"
             }`}
           >

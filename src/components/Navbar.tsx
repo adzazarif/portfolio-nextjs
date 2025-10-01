@@ -99,7 +99,7 @@ export default function Navbar() {
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="text-black duration-300 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center cursor-pointer border-cyan-400 shadow-[0_0_15px_#00ffff] shadow-cyan-400 bg-cyan-400 hover:bg-cyan-500"
+              className=" duration-300 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center cursor-pointer border-cyan-300/25 shadow-[0_0_15px_#00ffff] shadow-cyan-400/40 text-white bg-cyan-400/40 hover:bg-cyan-500"
             >
               Resume
             </button>
@@ -121,32 +121,42 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className={`items-center justify-between ${isMobileMenuOpen ? "" : "hidden"} w-full md:flex md:w-auto md:order-1`}>
+          <div
+            className={`items-center justify-between ${
+              isMobileMenuOpen ? "" : "hidden"
+            } w-full md:flex md:w-auto md:order-1`}
+          >
             <ul className="relative md:flex md:flex-row flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-4 md:mt-0 md:border-0 rtl:space-x-reverse">
               <div
                 ref={backgroundRef}
-                className="absolute z-[-1] bg-cyan-500/90 border border-cyan-300 rounded-2xl shadow-[0_0_10px_#00ffff] transition-all duration-300 ease-in-out hidden md:block"
+                className="absolute z-[-1] bg-gradient-to-r from-cyan-400/20 to-cyan-600/20 border border-cyan-300/25 rounded-2xl shadow-[0_0_10px_#00ffff] transition-all duration-300 ease-in-out hidden md:block"
                 style={{ transform: "translateX(0px)", width: 0, height: 0 }}
               />
-              {["home", "abouts", "achievement", "project", "contact"].map((id) => (
-                <li key={id}>
-                  <a
-                    href={`#${id}`}
-                    ref={(el) => {
-                      menuRefs.current[id] = el;
-                    }}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(id);
-                    }}
-                    className={`block py-2 px-4 duration-300 rounded-2xl relative z-10 ${
-                      activeSection === id ? "text-white" : "text-white hover:text-cyan-400"
-                    }`}
-                  >
-                    {id === "abouts" ? "About" : id.charAt(0).toUpperCase() + id.slice(1)}
-                  </a>
-                </li>
-              ))}
+              {["home", "abouts", "achievement", "project", "contact"].map(
+                (id) => (
+                  <li key={id}>
+                    <a
+                      href={`#${id}`}
+                      ref={(el) => {
+                        menuRefs.current[id] = el;
+                      }}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleNavClick(id);
+                      }}
+                      className={`block py-2 px-4 duration-300 rounded-2xl relative z-10 ${
+                        activeSection === id
+                          ? "text-white"
+                          : "text-white hover:text-cyan-400"
+                      }`}
+                    >
+                      {id === "abouts"
+                        ? "About"
+                        : id.charAt(0).toUpperCase() + id.slice(1)}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </div>
@@ -156,7 +166,9 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50">
           <div className="relative bg-white rounded-lg shadow-sm dark:bg-gray-700 max-w-3xl w-full p-4">
             <div className="flex items-center justify-between p-4 border-b dark:border-gray-600 border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Resume</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                Resume
+              </h3>
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -179,7 +191,11 @@ export default function Navbar() {
               </button>
             </div>
             <div className="p-4">
-              <embed src="/images/image/cv.pdf" type="application/pdf" className="w-full h-[80vh]" />
+              <embed
+                src="/images/image/cv.pdf"
+                type="application/pdf"
+                className="w-full h-[80vh]"
+              />
             </div>
           </div>
         </div>
